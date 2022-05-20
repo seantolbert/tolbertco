@@ -4,30 +4,32 @@ import {
   faHouse,
   faPuzzlePiece,
   faDiagramProject,
+  faFaceKiss
 } from "@fortawesome/free-solid-svg-icons";
 
-import Logo from "../assets/small_tolbert&co.png";
-import "./Sidebar.css";
+// import Logo from "../assets/small_tolbert&co.png";
+import "./Navbar.css";
 
-export default function Sidebar() {
+export default function Navbar() {
   return (
-    <div className="sidebar">
-      <div className="sidebar-content">
-        <div className="logo">
-          <img src={Logo} alt="Tolbert&co logo" />
-        </div>
+    <div className="navbar">
+      <div className="navbar-content">
         <nav className="links">
           <NavLink to="/">
             <FontAwesomeIcon icon={faHouse} />
-            Home
+            <span>Home</span>
           </NavLink>
           <NavLink to="/components">
             <FontAwesomeIcon icon={faPuzzlePiece} />
-            Components
+            <span>Components</span>
           </NavLink>
           <NavLink to="/projects">
             <FontAwesomeIcon icon={faDiagramProject} />
-            Projects
+            <span>Projects</span>
+          </NavLink>
+          <NavLink to="/aboout">
+            <FontAwesomeIcon icon={faFaceKiss} />
+            <span>About</span>
           </NavLink>
         </nav>
       </div>
