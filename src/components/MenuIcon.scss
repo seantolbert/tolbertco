@@ -1,32 +1,61 @@
 .icon-container {
-  height: 200px;
-  width: 200px;
+  transform: rotate(27deg);
+  height: fit-content;
+  width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: black; */
+  position: absolute;
+  top: 700px;
+  // z-index: -20;
+
+  &:hover {
+    .top {
+      animation: floatTop 3s ease-in-out infinite;
+    }
+    .right {
+      animation: floatRight 3s ease-in-out infinite;
+    }
+    .left {
+      animation: floatLeft 3s ease-in-out infinite
+    }
+  }
+
 }
 
-.red,
-.blue,
-.yellow {
+.top,
+.right,
+.left {
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   transition: transform 2s;
 }
 
-.yellow {
-  background: yellow;
-  transform: matrix(0, 0.7, 1.4, 0, 50, -38) rotate(45deg);
+.top {
+  transform: matrix(0, 0.7, 1.4, 0, 126, -73) rotate(45deg);
 }
 
-.blue {
-  background: blue;
+.right {
   transform: matrix(0, 1, 1, -0.5, -25, 0);
 }
 
-.red {
-  background: red;
+.left {
   transform: matrix(0, 1, 1, 0.5, -25, 0);
+}
+
+@keyframes floatTop {
+  0% {transform: matrix(0, 0.7, 1.4, 0, 50, -38) rotate(45deg)}
+  50% {transform: matrix(0, 0.7, 1.4, 0, 50, -47) rotate(45deg)}
+  100% {transform: matrix(0, 0.7, 1.4, 0, 50, -38) rotate(45deg)}
+}
+@keyframes floatRight {
+  0% {transform: matrix(0, 1, 1, -0.5, -25, 0)}
+  50% {transform: matrix(0, 1, 1, -0.5, -15, 0)}
+  100% {transform: matrix(0, 1, 1, -0.5, -25, 0)}
+}
+@keyframes floatLeft {
+  0% {transform: matrix(0, 1, 1, 0.5, -25, 0)}
+  50% {transform: matrix(0, 1, 1, 0.5, -30, 0)}
+  100% {transform: matrix(0, 1, 1, 0.5, -25, 0)}
 }
