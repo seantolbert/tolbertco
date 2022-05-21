@@ -1,15 +1,14 @@
 // styles
-import Navbar from "../../components/Navbar";
+// import Navbar from "../../components/Navbar";
 import "./Home.css";
 
 export default function Home() {
   return (
     <div className="home">
-      <div className="heading-container">
-        <p className="home-heading">Welcome to my resume and portfolio</p>
-        <p className="home-subheading">I am a creative full stack developer</p>
+      <div className="p-7">
+        <p className="text-primary font-bold text-8xl">I am a creative full-stack web developer</p>
+        <p className="text-highlight text-4xl">Looking for opportunities</p>
       </div>
-      <Navbar />
     </div>
   );
 }
