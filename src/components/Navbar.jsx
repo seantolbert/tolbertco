@@ -15,7 +15,7 @@ export default function Navbar() {
     <div className="navbar">
       <div className="navbar-content">
         <MenuIcon />
-        <nav className="links">
+        <nav className="links space-x-6">
           <NavLink to="/">
             <FontAwesomeIcon icon={faHouse} />
             <span>Home</span>
