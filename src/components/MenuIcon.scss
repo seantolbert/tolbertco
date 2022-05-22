@@ -1,78 +1,96 @@
-.icon-container {
-  // transform: rotate(27deg);
-  height: fit-content;
-  width: fit-content;
+.menu-container {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  padding: 50px;
+  right: 0;
+
+  &:hover {
+    .glow {
+      opacity: 1;
+    }
+    .slide-left {
+      transform: translate(-65px, 20px);
+    }
+    .slide-right {
+      transform: translate(65px, 20px);
+    }
+    .top,
+    .left,
+    .right {
+      transform: unset;
+      width: 60px;
+      height: 60px;
+      border-radius: 5px;
+    }
+  }
+}
+
+span {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 700px;
-  // z-index: -20;
-
-  &:hover {
-    .top {
-      animation: floatTop 3s ease-in-out infinite;
-    }
-    .right {
-      animation: floatRight 3s ease-in-out infinite;
-    }
-    .left {
-      animation: floatLeft 3s ease-in-out infinite;
-    }
-  }
+  color: white;
 }
 
-.top,
-.right,
-.left {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  transition: transform 2s;
+.cube {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
 }
 
 .top {
-  transform: matrix(0, 0.7, 1.4, 0, 125, -74) rotate(45deg);
-}
-
-.right {
-  transform: matrix(0, 1, 1, -0.5, -25, 0);
+  background: #41aed2;
+  width: 50px;
+  height: 50px;
+  transition: transform 1.3s, width 2s, height 2s, border-radius 1s ;
+  transform: rotate(-45deg) skew(20deg, 20deg) translate(27px, -27px);
 }
 
 .left {
-  transform: matrix(0, 1, 1, 0.5, -25, 0);
+  background: #00bfff;
+  width: 50px;
+  height: 50px;
+  transition: transform 1.5s, width 2s, height 2s, border-radius 1s;
+  transform: translate(-26px, -43px) rotate(13deg) skew(20deg, 20deg) ;
 }
 
-@keyframes floatTop {
-  0% {
-    transform: matrix(0, 0.7, 1.4, 0, 50, -38) rotate(45deg);
-  }
-  50% {
-    transform: matrix(0, 0.7, 1.4, 0, 50, -47) rotate(45deg);
-  }
-  100% {
-    transform: matrix(0, 0.7, 1.4, 0, 50, -38) rotate(45deg);
-  }
+.right {
+  background: #474747;
+  width: 50px;
+  height: 50px;
+  transition: transform 1s, width 2s, height 2s, border-radius 1s;
+  transform: translate(28px, -108px) rotate(-105deg) skew(20deg, 20deg) ;
 }
-@keyframes floatRight {
-  0% {
-    transform: matrix(0, 1, 1, -0.5, -25, 0);
-  }
-  50% {
-    transform: matrix(0, 1, 1, -0.5, -15, 0);
-  }
-  100% {
-    transform: matrix(0, 1, 1, -0.5, -25, 0);
-  }
+
+.glow {
+  border-radius: 50%;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform: translate(0px, 25px);
+  background: #d8db48;
+  box-shadow: 0 0 35px 30px #d8db48;
+  transition: transform 2s, opacity 1.5s;
+  opacity: 1;
+  z-index: -50;
 }
-@keyframes floatLeft {
-  0% {
-    transform: matrix(0, 1, 1, 0.5, -25, 0);
-  }
-  50% {
-    transform: matrix(0, 1, 1, 0.5, -30, 0);
-  }
-  100% {
-    transform: matrix(0, 1, 1, 0.5, -25, 0);
-  }
+
+.top:hover,
+.left:hover,
+.right:hover {
+  color: yellow;
+  font-weight: bold;
 }
+
+// @keyframes floatTop {
+//   0% {
+//     transform: matrix(0, 0.7, 1.4, 0, 50, -38) rotate(45deg);
+//   }
+//   50% {
+//     transform: matrix(0, 0.7, 1.4, 0, 50, -47) rotate(45deg);
+//   }
+//   100% {
+//     transform: matrix(0, 0.7, 1.4, 0, 50, -38) rotate(45deg);
+//   }
+// }
