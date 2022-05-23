@@ -9,7 +9,7 @@ export default function MenuIcon() {
       <span className="glow slide"></span>
       <span className="glow slide-down"></span>
       <span className="glow slide-down-further"></span>
-      <div className="cube">
+      <div className="cube text-lightGrey">
         <span className="top bg-primary">
           <NavLink className="rounded-md" to="#home">
             <FontAwesomeIcon icon={faHome} />

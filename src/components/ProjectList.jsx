@@ -3,13 +3,13 @@ import Quotate from "../assets/small_quotate.png";
 
 export default function ProjectList() {
   return (
-    <div id="projectlist" className="">
+    <div id="projectlist" className="bg-primary">
       <div className="card">
         <div className="card__image-container">
           <img src={Quotate} alt="quotate logo" />
         </div>
         <div className="card-about">
-          <span className="about-title text-dark">Quotate</span>
+          <span className="about-title">Quotate</span>
           <p className="about-descrip">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
             quod vel iure unde reprehenderit hic soluta velit repellat maiores
