@@ -9,11 +9,14 @@
     .glow {
       opacity: 1;
     }
-    .slide-left {
-      transform: translate(-65px, 20px);
+    .slide {
+      transform: translate(0, 25px);
     }
-    .slide-right {
-      transform: translate(65px, 20px);
+    .slide-down {
+      transform: translate(0, 100px);
+    }
+    .slide-down-further {
+      transform: translate(0, 175px);
     }
     .top,
     .left,
@@ -26,41 +29,46 @@
   }
 }
 
-span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
 .cube {
   display: flex;
   gap: 15px;
   flex-direction: column;
-}
 
-.top {
-  background: #41aed2;
-  width: 50px;
-  height: 50px;
-  transition: transform 1.3s, width 2s, height 2s, border-radius 1s ;
-  transform: rotate(-45deg) skew(20deg, 20deg) translate(27px, -27px);
-}
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 50px;
+    height: 50px;
+    transition: transform 1.3s, width 2s, height 2s, border-radius 1s,
+      color 0.8s, box-shadow 1s;
 
-.left {
-  background: #00bfff;
-  width: 50px;
-  height: 50px;
-  transition: transform 1.5s, width 2s, height 2s, border-radius 1s;
-  transform: translate(-26px, -43px) rotate(13deg) skew(20deg, 20deg) ;
-}
+    .a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    svg {
+      padding: 3px 7px;
+      margin-top: 3px;
+    }
 
-.right {
-  background: #474747;
-  width: 50px;
-  height: 50px;
-  transition: transform 1s, width 2s, height 2s, border-radius 1s;
-  transform: translate(28px, -108px) rotate(-105deg) skew(20deg, 20deg) ;
+    &:hover {
+      color: gold;
+    }
+  }
+
+  .top {
+    transform: rotate(-45deg) skew(20deg, 20deg) translate(27px, -27px);
+  }
+  .left {
+    transform: translate(-26px, -43px) rotate(13deg) skew(20deg, 20deg);
+  }
+
+  .right {
+    transform: translate(28px, -108px) rotate(-105deg) skew(20deg, 20deg);
+  }
 }
 
 .glow {
@@ -71,16 +79,9 @@ span {
   transform: translate(0px, 25px);
   background: #d8db48;
   box-shadow: 0 0 35px 30px #d8db48;
-  transition: transform 2s, opacity 1.5s;
+  transition: transform 0.8s, opacity 1.5s;
   opacity: 1;
   z-index: -50;
-}
-
-.top:hover,
-.left:hover,
-.right:hover {
-  color: yellow;
-  font-weight: bold;
 }
 
 // @keyframes floatTop {

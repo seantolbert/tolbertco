@@ -1,0 +1,28 @@
+#projectlist {
+  margin: 100px 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  .card {
+    display: flex;
+    position: relative;
+    width: 30%;
+  }
+
+  .card-about {
+    position: absolute;
+  }
+
+  .about-title {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
+    transform: translate(0, 75px);
+    backdrop-filter: blur(10px);
+    line-height: 1.8rem;
+  }
+
+  p {
+    display: none;
+  }
+}
