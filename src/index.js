@@ -19,7 +19,7 @@ const authLink = setContext((_, { headers }) => {
   return {
     headers: {
       ...headers,
-      authorization: `Bearer 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`,
+      authorization: `Bearer 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`,
     },
   };
 });
