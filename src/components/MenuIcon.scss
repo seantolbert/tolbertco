@@ -4,7 +4,7 @@
   position: fixed;
   padding: 50px;
   right: 0;
-  border: 1px solid white;
+  // border: 1px solid white;
 
   &:hover {
     .glow {
@@ -26,6 +26,13 @@
       border-radius: 5px;
     }
 
+    .right2 {
+      transform: translate(0, 220px);
+      width: 60px;
+      height: 60px;
+      border-radius: 5px;
+    }
+
     .top,
     .left,
     .right {
@@ -37,14 +44,26 @@
   }
 }
 
-.top2 input {
-  width: inherit;
-  height: inherit;
-  padding: 10px;
-  border-radius: 10px;
+.top2 {
+  position: absolute;
+  transform: rotate(-45deg) skew(20deg, 20deg) translate(27px, -27px);
 
-  &:focus {
-    outline: none;
+  input {
+    width: inherit;
+    height: inherit;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+
+    &:focus {
+      outline: none;
+      z-index: 100;
+    }
+  }
+  .mag {
+    font-size: 1.5rem;
+    transition: opacity 1s, transform 1s;
+    opacity: 1;
   }
 }
 
@@ -78,10 +97,7 @@
     }
   }
 
-  .top2 {
-    position: absolute;
-    transform: rotate(-45deg) skew(20deg, 20deg) translate(27px, -27px);
-  }
+  
 
   .top {
     transform: rotate(-45deg) skew(20deg, 20deg) translate(27px, -27px);
@@ -93,6 +109,11 @@
   .right {
     transform: translate(28px, -108px) rotate(-105deg) skew(20deg, 20deg);
   }
+
+  .right2 {
+    position: absolute;
+    transform: translate(1000px, 0px);
+  }
 }
 
 .glow {
@@ -103,8 +124,8 @@
   transform: translate(0px, 25px);
   background: #d8db48;
   box-shadow: 0 0 35px 30px #d8db48;
-  transition: transform 0.8s, opacity 1.5s;
-  opacity: 1;
+  transition: transform 0.8s, opacity 0.5s;
+  opacity: 0;
   z-index: -50;
 }
 

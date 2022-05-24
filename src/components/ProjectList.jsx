@@ -14,8 +14,8 @@ export default function ProjectList() {
         {/* {projects && projects.user.pinnedItems.edges[1].node.name}
         {projects && projects.user.pinnedItems.edges[1].node.url}
         {projects && projects.user.pinnedItems.edges[1].node.updatedAt} */}
-        {projects && projects.user.name}
-        {projects && projects.user.url}
+        {/* {projects && projects.user.name}
+        {projects && projects.user.url} */}
         {/* {projects && projects.user.pinnedItems.totalCount} */}
         {projects &&
           projects.user.pinnedItems.edges.map(({ node }) => (

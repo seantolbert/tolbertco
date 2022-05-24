@@ -1,6 +1,12 @@
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faDna, faJedi,  } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHome,
+  faDna,
+  faJedi,
+  faSearch,
+  faBrush
+} from "@fortawesome/free-solid-svg-icons";
 import "./MenuIcon.scss";
 
 export default function MenuIcon() {
@@ -12,10 +18,11 @@ export default function MenuIcon() {
       <div className="cube text-lightGrey">
         <span className="top2">
           <input type="text" className="bg-darkGrey text-light caret-primary" />
+          <FontAwesomeIcon icon={faSearch} className="absolute mag" />
         </span>
         <span className="top bg-primary">
           <NavLink className="rounded-md" to="#home">
-            <FontAwesomeIcon icon={faSearch} />
+            <FontAwesomeIcon icon={faHome} />
           </NavLink>
         </span>
         <span className="left bg-secondary">
@@ -23,11 +30,13 @@ export default function MenuIcon() {
             <FontAwesomeIcon icon={faDna} />
           </NavLink>
         </span>
+        <span className="right2 bg-light">
+            <FontAwesomeIcon icon={faBrush} />
+        </span>
         <span className="right bg-dark">
           <NavLink to="#projectlist">
             <FontAwesomeIcon icon={faJedi} />
           </NavLink>
-          <i className="fa-solid fa-diagram-project"></i>
         </span>
       </div>
     </div>
