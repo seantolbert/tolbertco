@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar-content">
-        <Search />
+        {/* <Search /> */}
         <MenuIcon />
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faDna, faJedi,  } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faDna, faJedi,  } from "@fortawesome/free-solid-svg-icons";
 import "./MenuIcon.scss";
 
 export default function MenuIcon() {
@@ -10,9 +10,12 @@ export default function MenuIcon() {
       <span className="glow slide-down"></span>
       <span className="glow slide-down-further"></span>
       <div className="cube text-lightGrey">
+        <span className="top2">
+          <input type="text" className="bg-darkGrey text-light caret-primary" />
+        </span>
         <span className="top bg-primary">
           <NavLink className="rounded-md" to="#home">
-            <FontAwesomeIcon icon={faHome} />
+            <FontAwesomeIcon icon={faSearch} />
           </NavLink>
         </span>
         <span className="left bg-secondary">
