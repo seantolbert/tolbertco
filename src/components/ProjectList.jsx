@@ -13,6 +13,7 @@ import SassLogo from "../assets/sass.svg";
 import FirebaseLogo from "../assets/firebase.svg";
 import GraphqlLogo from "../assets/graphql.svg";
 import HerokuLogo from "../assets/heroku-icon.svg";
+import DockerLogo from "../assets/docker-icon.svg"
 
 export default function ProjectList() {
   const { error, isPending, data: projects } = useGitMetrics();
