@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App h-screen bg-dark">
       <Navbar />
       <Home />
       <ProjectList />

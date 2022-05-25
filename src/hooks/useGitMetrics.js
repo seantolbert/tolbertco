@@ -5,7 +5,7 @@ const GET_PROJECTS = gql`
     user(login: "seantolbert") {
       name
       url
-      pinnedItems(first: 6) {
+      pinnedItems(first: 3) {
         totalCount
         edges {
           node {
@@ -14,6 +14,7 @@ const GET_PROJECTS = gql`
               name
               url
               updatedAt
+              description
             }
           }
         }

@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import env from 'react-dotenv'
 import "./index.css";
 import App from "./App";
 import {
@@ -19,7 +20,7 @@ const authLink = setContext((_, { headers }) => {
   return {
     headers: {
       ...headers,
-      authorization: `Bearer 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`,
+      authorization: `Bearer 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`,
     },
   };
 });
@@ -39,3 +40,4 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
