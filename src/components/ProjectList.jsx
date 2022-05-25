@@ -10,13 +10,7 @@ export default function ProjectList() {
     <div id="projectlist" className="bg-dark">
       {error && <div className="error">Something is wrong</div>}
       {isPending && <div>Loading...</div>}
-      <div className="text-white">
-        {/* {projects && projects.user.pinnedItems.edges[1].node.name}
-        {projects && projects.user.pinnedItems.edges[1].node.url}
-        {projects && projects.user.pinnedItems.edges[1].node.updatedAt} */}
-        {/* {projects && projects.user.name}
-        {projects && projects.user.url} */}
-        {/* {projects && projects.user.pinnedItems.totalCount} */}
+      <div className="text-white flex">
         {projects &&
           projects.user.pinnedItems.edges.map(({ node }) => (
             <a href={node.url} className="flex" key={node.id}>
