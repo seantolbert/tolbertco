@@ -1,5 +1,5 @@
 // pages and components
-import { Navbar, Home, ProjectList } from "./components/index";
+import { Navbar, Home, ProjectList} from "./components/index";
 
 // styles
 import "./App.css";
