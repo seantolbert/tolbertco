@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import env from 'react-dotenv'
 import "./index.css";
 import App from "./App";
 import {
@@ -20,7 +19,7 @@ const authLink = setContext((_, { headers }) => {
   return {
     headers: {
       ...headers,
-      authorization: `Bearer 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`,
+      authorization: `Bearer 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`,
     },
   };
 });

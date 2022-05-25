@@ -1,7 +1,6 @@
 import "./ProjectList.scss";
 
 import { useGitMetrics } from "../hooks/useGitMetrics";
-import { Link } from "react-router-dom";
 
 export default function ProjectList() {
   const { error, isPending, data: projects } = useGitMetrics();
@@ -21,9 +20,10 @@ export default function ProjectList() {
             <a href={node.url} className="card" key={node.id}>
               <div className="card-content">
                 <div className="card-title">{node.name}</div>
-                <div className="card-updated">Last updated {node.updatedAt}</div>
+                <div className="card-updated">
+                  Last updated {node.updatedAt}
+                </div>
                 <div className="card-description">{node.description}</div>
-                
               </div>
             </a>
           ))}
