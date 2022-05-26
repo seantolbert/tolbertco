@@ -7,33 +7,27 @@ import {
   faSearch,
   faBrush
 } from "@fortawesome/free-solid-svg-icons";
-import "./MenuIcon.scss";
+import "./MenuIcon2.scss";
 
 export default function MenuIcon() {
   return (
     <div className="menu-container">
       <span className="glow slide"></span>
       <span className="glow slide-down"></span>
-      <span className="glow slide-down-further"></span>
-      <div className="cube text-lightGrey">
-        <span className="top2">
-          <input type="text" className="bg-darkGrey text-light caret-primary" />
-          <FontAwesomeIcon icon={faSearch} className="absolute mag" />
-        </span>
-        <span className="top bg-primary">
-          <NavLink className="rounded-md" to="#home">
-            <FontAwesomeIcon icon={faHome} />
+      {/* <span className="glow slide-down-further"></span> */}
+      <div className="cube text-darkGrey">
+          <NavLink className="search rounded-md " to="#home">
+            <FontAwesomeIcon icon={faSearch} />
           </NavLink>
+        <span className="top bg-primary">
+          <input type="text" className="bg-primary text-white w-100"/>
         </span>
         <span className="left bg-secondary">
           <NavLink to="#components">
-            <FontAwesomeIcon icon={faDna} />
+            <FontAwesomeIcon icon={faHome} />
           </NavLink>
         </span>
-        <span className="right2 bg-light">
-            <FontAwesomeIcon icon={faBrush} />
-        </span>
-        <span className="right bg-dark">
+        <span className="right bg-darkGrey">
           <NavLink to="#projectlist">
             <FontAwesomeIcon icon={faJedi} />
           </NavLink>

@@ -12,14 +12,12 @@ module.exports = {
         light: "#f4f4f4",
       },
       boxShadow: {
-        primaryNeu: "inset 2px 2px 5px #286c85, inset -2px -2px 5px #72ffff",
-        secondaryNeu: "inset 2px 2px 5px #507785, inset -2px -2px 5px #e2ffff",
-        darkNeu: "inset 2px 2px 5px #252525, inset -2px -2px 5px #696969",
-        darkGreyNeu: "10px 10px 20px #565656, -10px -10px 20px #a0a0a0",
-        lightGreyNeu: "20px 20px 60px #5d5d5d, -20px -20px 60px #d5d5d5",
-        lightNeu: "20px 20px 60px #adadad, -20px -20px 60px #ffffff"
+        smallDark: "3px 3px 5px #353535, -3px -3px 5px #c1c1c1",
+        medDark: "8px 8px 20px #353535, -8px -8px 16px #c1c1c1",
+        pressedMedDark:
+          "inset 3px 3px 5px #353535, inset -3px -3px 5px #c1c1c1",
       },
     },
+    plugins: [],
   },
-  plugins: [],
 };

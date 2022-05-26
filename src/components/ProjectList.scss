@@ -1,14 +1,11 @@
 .card {
-  // border: 1px solid white;
   padding: 20px;
   .card-content {
     height: 100%;
-    // border: 1px solid white;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // box-shadow: 8px 8px 16px #353535, -8px -8px 16px #9a9a9a;
     transition: box-shadow 1s, transform 1s;
     border-radius: 10px;
 
@@ -43,6 +40,7 @@
     .card-description {
       margin: 20px 0;
     }
+
     .bottom-row {
       display: flex;
       justify-content: space-between;
@@ -55,9 +53,7 @@
         gap: 10px;
         .img-container {
           width: 25px;
-
         }
-
       }
 
       .buttons {

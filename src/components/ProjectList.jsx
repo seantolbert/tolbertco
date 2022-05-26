@@ -14,10 +14,10 @@ import FirebaseLogo from "../assets/firebase.svg";
 import GraphqlLogo from "../assets/graphql.svg";
 import HerokuLogo from "../assets/heroku-icon.svg";
 import DockerLogo from "../assets/docker-icon.svg"
+import TailwindIcon from "../assets/tailwindcss-icon.svg"
 
 export default function ProjectList() {
   const { error, isPending, data: projects } = useGitMetrics();
-  // console.log({ projects, error, isPending });
 
   const iconConverter = (name) => {
     if (name === "react") {
@@ -47,6 +47,12 @@ export default function ProjectList() {
     if (name === "heroku") {
       return HerokuLogo;
     }
+    if (name === 'docker') {
+      return DockerLogo
+    }
+    if (name === "tailwind") {
+      return TailwindIcon
+    }
   };
 
   return (
@@ -54,10 +60,10 @@ export default function ProjectList() {
       id="projectlist"
       className="bg-dark justify-center items-center w-full h-full"
     >
-      {error && <div className="error">Something is wrong</div>}
+      {error && <div className="error">Check your token!</div>}
       {isPending && <div>Loading...</div>}
       {/* <p className="text-secondary text-lg">Projects</p> */}
-      <div className="text-white grid grid-cols-3 gap-3 w-full projects h-72">
+      <div className="text-white grid grid-cols-3 gap-3 w-full projects">
         {projects &&
           projects.user.pinnedItems.edges.map(({ node }) => (
             <div className="card" key={node.id}>
