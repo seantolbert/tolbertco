@@ -13,7 +13,7 @@ const GET_PROJECTS = gql`
               id
               name
               url
-              updatedAt
+              createdAt
               description
               repositoryTopics(first: 4) {
                 edges {

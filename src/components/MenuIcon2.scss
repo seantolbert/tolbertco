@@ -4,8 +4,8 @@
   position: fixed;
   padding: 50px;
   right: 0;
-  border: 1px solid white;
-  
+  // border: 1px solid white;
+
   &:hover {
     .glow {
       opacity: 1;
@@ -19,12 +19,12 @@
     .slide-down-further {
       transform: translate(0, 175px);
     }
-    
+
     .search {
       // opacity: 1;
       transform: translate(-20px, 17px);
     }
-    
+
     .top {
       align-self: flex-end;
       transform: skew(0);
@@ -33,12 +33,11 @@
       background: #474747;
       opacity: 1;
       height: 60px;
-      
+
       input {
         border-radius: 5px;
         padding: 10px 45px 10px 10px;
       }
-      
     }
 
     .left,
@@ -63,7 +62,6 @@
     // border-radius: 5px;
     font-size: 1.3rem;
     transition: border-radius 2s, padding 2s;
-
   }
   .mag {
     font-size: 1.5rem;
@@ -71,7 +69,6 @@
     opacity: 1;
   }
 }
-
 
 .cube {
   display: flex;

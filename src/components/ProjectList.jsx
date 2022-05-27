@@ -56,8 +56,12 @@ export default function ProjectList() {
   };
 
   const handleName = (n) => {
-    return n.replaceAll("-", " ").toUpperCase()
+    return n.replaceAll("-", " ").toUpperCase();
   };
+
+  // const handleDate = (d) => {
+  //   console.log(d.toString().subString(0, 10));
+  // };
 
   return (
     <div
@@ -72,11 +76,17 @@ export default function ProjectList() {
             <div className="group card" key={node.id}>
               <div className="card-content">
                 <div className="title-time">
-                  <div className="group-hover:text-primary card-title">{handleName(node.name)}</div>
-                  <div className="card-updated"></div>
-                  Last updated {node.updatedAt}
+                  <div className="group-hover:text-primary card-title transition duration-1000">
+                    {handleName(node.name)}
+                  </div>
+                  <div className="card-updated">
+                    {/* {handleDate(node.createdAt)} */}
+                    {node.createdAt}
+                  </div>
                 </div>
-                <div className="card-description">{node.description}</div>
+                <div className="card-description group-hover:text-secondary transition duration-700">
+                  {node.description}
+                </div>
                 <div className="bottom-row">
                   <div className="tech">
                     {node.repositoryTopics.edges.map(({ node }) => (
@@ -90,10 +100,10 @@ export default function ProjectList() {
                     ))}
                   </div>
                   <div className="buttons">
-                    <a href="#home" className="card-button">
+                    <a href="#home" className="card-button" rel="noreferrer" target="_blank">
                       <FontAwesomeIcon icon={faEye} />
                     </a>
-                    <a href={node.url} className="card-button">
+                    <a href={node.url} className="card-button" rel="noreferrer" target="_blank">
                       <FontAwesomeIcon icon={faGithub} />
                     </a>
                   </div>
