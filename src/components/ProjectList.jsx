@@ -13,8 +13,8 @@ import SassLogo from "../assets/sass.svg";
 import FirebaseLogo from "../assets/firebase.svg";
 import GraphqlLogo from "../assets/graphql.svg";
 import HerokuLogo from "../assets/heroku-icon.svg";
-import DockerLogo from "../assets/docker-icon.svg"
-import TailwindIcon from "../assets/tailwindcss-icon.svg"
+import DockerLogo from "../assets/docker-icon.svg";
+import TailwindIcon from "../assets/tailwindcss-icon.svg";
 
 export default function ProjectList() {
   const { error, isPending, data: projects } = useGitMetrics();
@@ -47,12 +47,16 @@ export default function ProjectList() {
     if (name === "heroku") {
       return HerokuLogo;
     }
-    if (name === 'docker') {
-      return DockerLogo
+    if (name === "docker") {
+      return DockerLogo;
     }
     if (name === "tailwind") {
-      return TailwindIcon
+      return TailwindIcon;
     }
+  };
+
+  const handleName = (n) => {
+    return n.replaceAll("-", " ").toUpperCase()
   };
 
   return (
@@ -62,19 +66,17 @@ export default function ProjectList() {
     >
       {error && <div className="error">Check your token!</div>}
       {isPending && <div>Loading...</div>}
-      {/* <p className="text-secondary text-lg">Projects</p> */}
       <div className="text-white grid grid-cols-3 gap-3 w-full projects">
         {projects &&
           projects.user.pinnedItems.edges.map(({ node }) => (
-            <div className="card" key={node.id}>
+            <div className="group card" key={node.id}>
               <div className="card-content">
                 <div className="title-time">
-                  <div className="card-title">{node.name}</div>
+                  <div className="group-hover:text-primary card-title">{handleName(node.name)}</div>
                   <div className="card-updated"></div>
                   Last updated {node.updatedAt}
                 </div>
                 <div className="card-description">{node.description}</div>
-
                 <div className="bottom-row">
                   <div className="tech">
                     {node.repositoryTopics.edges.map(({ node }) => (

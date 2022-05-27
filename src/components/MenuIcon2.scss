@@ -1,15 +1,12 @@
 .menu-container {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   position: fixed;
   padding: 50px;
   right: 0;
-  // border: 1px solid white;
-
+  border: 1px solid white;
+  
   &:hover {
-
-    svg
-
     .glow {
       opacity: 1;
     }
@@ -22,20 +19,12 @@
     .slide-down-further {
       transform: translate(0, 175px);
     }
-    // .top2 {
-    //   transform: translate(-210px, 0);
-    //   width: 180px;
-    //   height: 60px;
-    //   border-radius: 5px;
-    // }
-
-    // .right2 {
-    //   transform: translate(0, 240px);
-    //   width: 60px;
-    //   height: 60px;
-    //   border-radius: 5px;
-    // }
-
+    
+    .search {
+      // opacity: 1;
+      transform: translate(-20px, 17px);
+    }
+    
     .top {
       align-self: flex-end;
       transform: skew(0);
@@ -43,9 +32,14 @@
       border-radius: 2px;
       background: #474747;
       opacity: 1;
+      height: 60px;
+      
+      input {
+        border-radius: 5px;
+        padding: 10px 45px 10px 10px;
+      }
+      
     }
-
-
 
     .left,
     .right {
@@ -62,27 +56,14 @@
   transform: rotate(-45deg) skew(20deg, 20deg) translate(27px, -27px);
   border-radius: 2px;
 
-  &:focus {
-
-  }
-
-
   input {
     // width: inh÷erit;
     width: 100%;
     height: inherit;
-    padding: 10px;
     // border-radius: 5px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    transition: border-radius 2s, padding 2s;
 
-    &:focus {
-      outline: none;
-      // z-index:;
-    }
-  }
-  svg {
-    position: absolute;
-    transform: translate(-40px, -20px);
   }
   .mag {
     font-size: 1.5rem;
@@ -91,15 +72,19 @@
   }
 }
 
-.search {
-  position: absolute;
-  z-index: 19;
-}
 
 .cube {
   display: flex;
   gap: 15px;
   flex-direction: column;
+  align-items: flex-end;
+
+  .search {
+    transform: translate(-16.5px, -12.5px) rotate(-45deg) skew(15deg, 15deg);
+    position: absolute;
+    z-index: 19;
+    transition: transform 2s;
+  }
 
   span {
     display: flex;
@@ -141,19 +126,6 @@
     position: absolute;
     transform: translate(1000px, 0px);
   }
-}
-
-.glow {
-  border-radius: 50%;
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  transform: translate(0px, 25px);
-  background: #d8db48;
-  box-shadow: 0 0 35px 30px #d8db48;
-  transition: transform 0.8s, opacity 0.5s;
-  opacity: 0;
-  z-index: -50;
 }
 
 // @keyframes floatTop {
