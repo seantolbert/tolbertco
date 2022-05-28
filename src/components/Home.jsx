@@ -9,13 +9,12 @@ import {
 import FlexGrid from "./FlexGrid";
 
 export default function Home() {
-
   return (
     <>
-      <div id="home" className="py-72 bg-dark">
-    <FlexGrid />
-        <div className=" m-5 py-8 ">
-          <p className="text-primary font-bold text-8xl my-4">
+      <div id="home" className="py-72 bg-dark overflow-hidden">
+          {/* <FlexGrid /> */}
+        <div className="py-8 overflow-hidden ">
+          <p className="text-primary font-bold text-8xl my-4 ">
             Hey, my name is Sean
           </p>
           <p className="text-light text-4xl">
