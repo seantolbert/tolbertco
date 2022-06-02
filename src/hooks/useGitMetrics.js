@@ -5,6 +5,12 @@ const GET_PROJECTS = gql`
     user(login: "seantolbert") {
       name
       url
+      bio
+      email
+      company
+      repositories {
+        totalCount
+      }
       pinnedItems(first: 6) {
         totalCount
         edges {
@@ -15,6 +21,7 @@ const GET_PROJECTS = gql`
               url
               createdAt
               description
+              homepageUrl
               repositoryTopics(first: 4) {
                 edges {
                   node {

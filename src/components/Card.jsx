@@ -1,7 +1,7 @@
 import "./Card.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye } from "@fortawesome/free-regular-svg-icons";
+import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import ReactLogo from "../assets/react.svg";
@@ -57,7 +57,7 @@ export default function Card({ node }) {
     return n.replaceAll("-", " ").toUpperCase();
   };
   return (
-    <div className="group card" key={node.id}>
+    <div className="group card">
       <div className="card-content">
         <div className="title-time">
           <div className="group-hover:text-primary card-title transition duration-1000">
@@ -84,14 +84,21 @@ export default function Card({ node }) {
             ))}
           </div>
           <div className="buttons">
-            <a
-              href="#home"
-              className="card-button"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <FontAwesomeIcon icon={faEye} />
-            </a>
+            {node.homepageUrl && (
+              <a
+                href={node.homepageUrl}
+                className="card-button"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <FontAwesomeIcon icon={faEye} />
+              </a>
+            )}
+            {!node.homepageUrl && (
+              <div className="card-button">
+                <FontAwesomeIcon icon={faEyeSlash} />
+              </div>
+            )}
             <a
               href={node.url}
               className="card-button"

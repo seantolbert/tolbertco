@@ -19,10 +19,12 @@ const authLink = setContext((_, { headers }) => {
   return {
     headers: {
       ...headers,
-      authorization: `Bearer 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`,
+      authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN}`,
     },
   };
 });
+
+console.log(process.env.REACT_APP_GITHUB_ACCESS_TOKEN)
 
 const client = new ApolloClient({
   link: authLink.concat(httpLink),

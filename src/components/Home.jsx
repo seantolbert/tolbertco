@@ -4,24 +4,23 @@ import {
   faGithub,
   faLinkedin,
   faCodepen,
-  // faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import FlexGrid from "./FlexGrid";
 
 export default function Home() {
+
   return (
     <>
-      <div id="home" className="py-72 bg-dark overflow-hidden">
-          {/* <FlexGrid /> */}
-        <div className="py-8 overflow-hidden ">
-          <p className="text-primary font-bold text-8xl my-4 ">
+      <div id="home" className="bg-dark overflow-hidden">
+        {/* <FlexGrid /> */}
+        <div className="m-4 overflow-hidden ">
+          <p className="text-primary font-bold text-8xl ">
             Hey, my name is Sean
           </p>
           <p className="text-light text-4xl">
             I am a creative full-stack web developer accepting opportunities
           </p>
         </div>
-        <nav className="ml-8 flex justify-start gap-10">
+        <nav className="m-8 flex justify-start gap-10">
           <a
             href="https://github.com/seantolbert"
             rel="noreferrer"
@@ -49,9 +48,6 @@ export default function Home() {
               <FontAwesomeIcon icon={faCodepen} />
             </button>
           </a>
-          {/* <button className="text-5xl text-white hover:text-secondary transition ease-out duration-300 nav-button p-3 rounded-full">
-          <FontAwesomeIcon icon={faInstagram} />
-        </button> */}
         </nav>
       </div>
     </>

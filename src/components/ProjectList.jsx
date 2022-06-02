@@ -23,7 +23,7 @@ export default function ProjectList() {
       <div className="text-white grid grid-cols-3 gap-3 w-full projects">
         {projects &&
           projects.user.pinnedItems.edges.map(({ node }) => (
-            <Card node={node} />
+            <Card node={node} key={node.id} />
           ))}
       </div>
     </div>
