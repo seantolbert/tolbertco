@@ -13,10 +13,10 @@ export default function Contact() {
 
   return (
     <form
-      className="flex flex-col items-center w-full bg-dark pb-52"
+      className="flex flex-col items-center w-full bg-dark "
       onSubmit={handleSubmit}
     >
-      <div className="w-1/3 flex flex-col items-center gap-5">
+      <div className="w-4/5 flex flex-col items-center gap-5">
         <p className="text-4xl text-light">Contact</p>
         <p className="text-xl text-secondary">
           Have a question or want to work together?
