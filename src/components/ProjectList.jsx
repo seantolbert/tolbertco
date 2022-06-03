@@ -1,4 +1,3 @@
-import "./ProjectList.scss";
 import { useGitMetrics } from "../hooks/useGitMetrics";
 import Card from './Card'
 

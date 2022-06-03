@@ -1,4 +1,3 @@
-import "./Home.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -26,7 +25,7 @@ export default function Home() {
             rel="noreferrer"
             target="_blank"
           >
-            <button className="text-5xl text-white hover:text-secondary transition ease-out duration-300 nav-button p-3 rounded-full">
+            <button className="text-5xl text-white hover:text-secondary transition hover:shadow-medDark active:shadow-pressedMedDark duration-500 nav-button p-3 rounded-full">
               <FontAwesomeIcon icon={faGithub} />
             </button>
           </a>
@@ -35,7 +34,7 @@ export default function Home() {
             rel="noreferrer"
             target="_blank"
           >
-            <button className="text-5xl text-white hover:text-secondary transition ease-out duration-300 nav-button p-3 rounded-full">
+            <button className="text-5xl text-white hover:text-secondary transition hover:shadow-medDark active:shadow-pressedMedDark duration-500 nav-button p-3 rounded-full">
               <FontAwesomeIcon icon={faLinkedin} />
             </button>
           </a>
@@ -44,7 +43,7 @@ export default function Home() {
             rel="noreferrer"
             target="_blank"
           >
-            <button className="text-5xl text-white hover:text-secondary transition ease-out duration-300 nav-button p-3 rounded-full">
+            <button className="text-5xl text-white hover:text-secondary transition hover:shadow-medDark active:shadow-pressedMedDark duration-500 nav-button p-3 rounded-full">
               <FontAwesomeIcon icon={faCodepen} />
             </button>
           </a>

@@ -1,4 +1,3 @@
-import "./Contact.scss";
 import { useRef, useState } from "react";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -9,9 +8,9 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [recaptchaToken, setRecaptchaToken] = useState();
 
-  const formId = "gUvumZ3i";
+  const formId = `${process.env.REACT_APP_FORM_ID}`;
   const formSparkUrl = `https://submit-form.com/${formId}`;
-  const recaptchaKey = "6Ld9R0AgAAAAAMqCpXTQAoSsRiC9rOO_cjizpLsO";
+  const recaptchaKey = `${process.env.REACT_APP_RECAPTCHA_KEY}`;
   const recaptchaRef = useRef();
 
   const handleSubmit = async (e) => {
@@ -73,14 +72,14 @@ export default function Contact() {
           onChange={(e) => setMessage(e.target.value)}
           value={message}
         />
-        <ReCAPTCHA
+        {/* <ReCAPTCHA
         className="p-2 transition duration-1000 group-hover:shadow-medDark rounded-xl"
           ref={recaptchaRef}
           sitekey={recaptchaKey}
           onChange={updateRecaptchaToken}
           theme="dark"
           // size='compact'
-        />
+        /> */}
         <button
           type="submit"
           className="p-3 m-4 rounded-md text-primary text-xl transition duration-1000 transition duration-300 focus:shadow-pressedMedDark active:shadow-pressedMedDark"
