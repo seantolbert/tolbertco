@@ -3,11 +3,13 @@ import { useQuery, gql } from "@apollo/client";
 const GET_PROJECTS = gql`
   query {
     user(login: "seantolbert") {
-      name
       url
-      bio
-      email
-      company
+      location
+      status {
+        emoji
+        createdAt
+        message
+      }
       repositories {
         totalCount
       }

@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <>
-      <div id="home" className="bg-dark overflow-hidden">
+      <div id="home" className="bg-dark overflow-hidden pt-72 pb-10">
         {/* <FlexGrid /> */}
         <div className="m-4 overflow-hidden ">
           <p className="text-primary font-bold text-8xl ">

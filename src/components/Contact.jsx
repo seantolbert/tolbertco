@@ -1,27 +1,27 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [recaptchaToken, setRecaptchaToken] = useState();
+  // const [recaptchaToken, setRecaptchaToken] = useState();
 
   const formId = `${process.env.REACT_APP_FORM_ID}`;
   const formSparkUrl = `https://submit-form.com/${formId}`;
-  const recaptchaKey = `${process.env.REACT_APP_RECAPTCHA_KEY}`;
-  const recaptchaRef = useRef();
+  // const recaptchaKey = `${process.env.REACT_APP_RECAPTCHA_KEY}`;
+  // const recaptchaRef = useRef();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(name, email, message, formId, recaptchaToken);
+    // console.log(name, email, message, formId, recaptchaToken);
     await postSubmission();
   };
 
   const postSubmission = async () => {
     const payload = {
-      "g-recaptcha-response": recaptchaToken,
+      // "g-recaptcha-response": recaptchaToken,
       name,
       email,
       message,
@@ -34,13 +34,13 @@ export default function Contact() {
     }
   };
 
-  const updateRecaptchaToken = (token) => {
-    setRecaptchaToken(token);
-  };
+  // const updateRecaptchaToken = (token) => {
+  //   setRecaptchaToken(token);
+  // };
 
   return (
     <form
-      className="flex flex-col items-center w-full bg-dark mb-5"
+      className="flex flex-col items-center w-full bg-dark"
       onSubmit={handleSubmit}
     >
       <div className="w-4/5 flex rounded-xl p-4 flex-col group hover:shadow-smallDark items-center transition gap-5">
@@ -78,7 +78,7 @@ export default function Contact() {
           sitekey={recaptchaKey}
           onChange={updateRecaptchaToken}
           theme="dark"
-          // size='compact'
+          size='compact'
         /> */}
         <button
           type="submit"
