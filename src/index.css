@@ -25,6 +25,10 @@ body {
   outline: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 textarea {
   resize: none;
 }
