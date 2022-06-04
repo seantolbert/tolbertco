@@ -1,15 +1,15 @@
 .flexgrid {
-  position: absolute;
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
-  height: inherit;
   cursor: none;
-  top: 10%;
+  top: 0;
+  height: 300px;
+  width: 100%;
 
   .node {
-    width: 12px;
-    height: 12px;
+    width: 18px;
+    height: 18px;
     border-radius: 2px;
     transition: 2s;
 

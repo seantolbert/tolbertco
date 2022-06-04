@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
     {/* <ColorSquares /> */}
-      <div id="home" className="bg-dark overflow-hidden pt-72 pb-24">
+      <div id="home" className="bg-dark">
         <FlexGrid />
         <div className="m-4 overflow-hidden ">
           <p className="text-primary font-bold text-8xl ">
@@ -51,6 +51,7 @@ export default function Home() {
             </button>
           </a>
         </nav>
+        <FlexGrid />
       </div>
     </>
   );
