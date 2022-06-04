@@ -1,16 +1,19 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ColorSquares from "./ColorSquares";
 import {
   faGithub,
   faLinkedin,
   faCodepen,
 } from "@fortawesome/free-brands-svg-icons";
+import FlexGrid from "./FlexGrid";
 
 export default function Home() {
 
   return (
     <>
+    {/* <ColorSquares /> */}
       <div id="home" className="bg-dark overflow-hidden pt-72 pb-24">
-        {/* <FlexGrid /> */}
+        <FlexGrid />
         <div className="m-4 overflow-hidden ">
           <p className="text-primary font-bold text-8xl ">
             Hey, my name is Sean

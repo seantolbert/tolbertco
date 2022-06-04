@@ -1,22 +1,18 @@
 .flexgrid {
+  top: 10%;
   position: absolute;
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
   overflow: hidden;
-  // z-index: 400;
   height: inherit;
   cursor: none;
 
   .node {
-    width: 30px;
-    height: 30px;
+    width: 12px;
+    height: 12px;
     transition: color 0.1s;
     border-radius: 2px;
-    transform: background 2s;
-
-    &:hover {
-      // box-shadow: 3px 3px 5px #353535, -3px -3px 5px #c1c1c1;
-      background: transparent;
-    }
+    // transition: background 2s;
   }
 }
