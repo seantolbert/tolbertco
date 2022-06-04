@@ -1,20 +1,11 @@
-.flexgrid {
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-  cursor: none;
-  top: 0;
-  height: 300px;
-  width: 100%;
+// I have been unable to get the lingering
+// effect for individual tiles without the
+// transition-duration-0 on line 7
 
-  .node {
-    width: 18px;
-    height: 18px;
-    border-radius: 2px;
-    transition: 2s;
+.node {
+  transition: 2.5s;
 
-    &:hover {
-      transition-duration: 0s;
-    }
+  &:hover {
+    transition-duration: 0s;
   }
 }

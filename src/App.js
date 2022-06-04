@@ -1,18 +1,29 @@
 // pages and components
-import { Home, ProjectList, MenuIcon, Contact} from "./components/index";
+import {
+  Home,
+  StatsBoard,
+  ProjectList,
+  MenuIcon,
+  Contact,
+  FlexGrid,
+} from "./components/index";
 
 // styles
 import "./App.css";
-import StatsBoard from "./components/StatsBoard";
 
 function App() {
   return (
     <div className="App h-screen bg-dark">
       <MenuIcon />
+      <FlexGrid />
       <Home />
+      <FlexGrid />
       <StatsBoard />
+      <FlexGrid />
       <ProjectList />
+      <FlexGrid />
       <Contact />
+      <FlexGrid />
     </div>
   );
 }

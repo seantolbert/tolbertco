@@ -82,7 +82,7 @@ export default function Contact() {
         /> */}
         <button
           type="submit"
-          className="p-3 m-4 rounded-md text-primary text-xl transition duration-1000 transition duration-300 focus:shadow-pressedMedDark active:shadow-pressedMedDark"
+          className="p-3 m-4 rounded-md text-primary text-xl transition duration-1000 transition duration-300 hover:shadow-medDark focus:shadow-medDark active:shadow-pressedMedDark"
         >
           send me a message
         </button>

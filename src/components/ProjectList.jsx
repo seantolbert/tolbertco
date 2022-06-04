@@ -6,8 +6,6 @@ import Card from './Card'
 export default function ProjectList() {
   const { error, isPending, data: projects } = useGitMetrics();
 
-  
-
   // const handleDate = (d) => {
   //   console.log(d.toString().subString(0, 10));
   // };
@@ -15,7 +13,7 @@ export default function ProjectList() {
   return (
     <div
       id="projectlist"
-      className="bg-dark justify-center items-center w-full h-full"
+      className="bg-dark justify-center items-center w-full"
     >
       {error && <div className="error">Check your token!</div>}
       {isPending && <div>Loading...</div>}
