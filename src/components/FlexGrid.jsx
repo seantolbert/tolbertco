@@ -7,7 +7,7 @@ export default function FlexGrid() {
   for (let i = 0; i < 500; i++) {
     tiles.push(
       <div
-        className="text-white transition duration-300 hover:bg-primary"
+        className="text-white hover:bg-primary hover:shadow-primaryGlow node"
       ></div>
     );
   }
