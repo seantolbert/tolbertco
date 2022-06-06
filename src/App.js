@@ -3,7 +3,7 @@ import {
   Home,
   StatsBoard,
   ProjectList,
-  MenuIcon,
+  // MenuIcon,
   Contact,
   FlexGrid,
 } from "./components/index";
@@ -13,11 +13,11 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App h-screen bg-dark">
-      <MenuIcon />
-      <FlexGrid color="primary"/>
+    <div className="App h-screen w-screen bg-dark">
+      {/* <MenuIcon /> */}
+      <FlexGrid/>
       <Home />
-      <FlexGrid color="light"/>
+      <FlexGrid/>
       <StatsBoard />
       <ProjectList />
       <FlexGrid />

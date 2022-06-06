@@ -5,6 +5,7 @@ const GET_PROJECTS = gql`
     user(login: "seantolbert") {
       url
       location
+      company
       status {
         emoji
         createdAt

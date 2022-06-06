@@ -15,7 +15,6 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log(name, email, message, formId, recaptchaToken);
     await postSubmission();
   };
 
@@ -43,7 +42,7 @@ export default function Contact() {
       className="flex flex-col items-center w-full bg-dark"
       onSubmit={handleSubmit}
     >
-      <div className="w-4/5 flex rounded-xl p-4 flex-col group hover:shadow-smallDark items-center transition gap-5">
+      <div className="w-4/5 flex rounded-xl p-5 flex-col group hover:shadow-smallDark items-center transition gap-5">
         <p className="text-4xl text-light">Contact</p>
         <p className="text-xl text-secondary">
           Have a question or want to work together?

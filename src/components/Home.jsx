@@ -6,7 +6,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
-
   return (
     <>
       <div id="home" className="bg-dark">
