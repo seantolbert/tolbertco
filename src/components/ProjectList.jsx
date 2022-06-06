@@ -1,7 +1,5 @@
 import { useGitMetrics } from "../hooks/useGitMetrics";
-import Card from './Card'
-
-
+import Card from "./Card";
 
 export default function ProjectList() {
   const { error, isPending, data: projects } = useGitMetrics();
@@ -17,7 +15,7 @@ export default function ProjectList() {
     >
       {error && <div className="error">Check your token!</div>}
       {isPending && <div>Loading...</div>}
-      <div className="text-white grid lg:grid-cols-3 md:grid-cols-2 gap-3 w-full projects">
+      <div className="text-white py-4 gap-5 flex snap-x w-full snap-mandatory overflow-auto">
         {projects &&
           projects.user.pinnedItems.edges.map(({ node }) => (
             <Card node={node} key={node.id} />

@@ -1,5 +1,3 @@
-import "./Card.scss";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -60,24 +58,25 @@ export default function Card({ node }) {
   };
 
   return (
-    <div className="group card">
-      <div className="card-content">
-        <div className="title-time">
-          <div className="group-hover:text-primary card-title transition duration-1000">
-            {handleName(node.name)}
-          </div>
-          <div className="card-updated">
+    <div className="group mx-5 w-30 snap-center rounded-lg">
+      <div className="h-full p-7 h-fit flex flex-col shadow-smallDark justify-between transition w-52 rounded-lg">
+        <div>
+          <div className="font-bold text-xl">{handleName(node.name)}</div>
+          <div className="font-light text-sm">
             {/* {handleDate(node.createdAt)} */}
             {node.createdAt}
           </div>
         </div>
-        <div className="card-description group-hover:text-secondary transition duration-700">
+        <div className="group-hover:text-secondary text-sm transition duration-700">
           {node.description}
         </div>
-        <div className="bottom-row">
-          <div className="tech">
+        <div className="flex justify-between pt-1">
+          <div className="gap-2 grid grid-rows-2 grid-cols-3">
             {node.repositoryTopics.edges.map(({ node }) => (
-              <div className="img-container" key={node.topic.name}>
+              <div
+                className="w-6 h-6 flex justify-center items-center"
+                key={node.topic.name}
+              >
                 <img
                   src={iconConverter(node.topic.name)}
                   alt={node.topic.name}
@@ -86,11 +85,11 @@ export default function Card({ node }) {
               </div>
             ))}
           </div>
-          <div className="buttons">
+          <div className="flex gap-1 flex-col">
             {node.homepageUrl && (
               <a
                 href={node.homepageUrl}
-                className="card-button"
+                className="rounded-full text-center w-10 transition"
                 rel="noreferrer"
                 target="_blank"
               >
@@ -98,13 +97,13 @@ export default function Card({ node }) {
               </a>
             )}
             {!node.homepageUrl && (
-              <div className="card-button">
+              <div className="rounded-full text-center w-10 transition">
                 <FontAwesomeIcon icon={faEyeSlash} />
               </div>
             )}
             <a
               href={node.url}
-              className="card-button"
+              className="rounded-full p-1 text-center w-10 transition"
               rel="noreferrer"
               target="_blank"
             >
