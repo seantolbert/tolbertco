@@ -28,7 +28,7 @@ export default function StatsBoard() {
           Operating in {facts && facts.user.location}
         </div>
       </div>
-      <div className="w-fit rounded-xl p-3 hover:shadow-smallDark transition m-4">
+      <div className="w-fit rounded-xl p-3 transition m-4">
         <span className="text-secondary font-bold">Git Contributions</span>
         <img
           src="https://ghchart.rshah.org/17A2B8/seantolbert"
