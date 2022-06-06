@@ -58,8 +58,8 @@ export default function Card({ node }) {
   };
 
   return (
-    <div className="group mx-5 w-30 snap-center rounded-lg">
-      <div className="h-full p-7 h-fit flex flex-col shadow-smallDark justify-between transition w-52 rounded-lg">
+    <div className="mx-4 h-50 snap-center rounded-lg">
+      <div className="p-7 h-full flex flex-col shadow-smallDark justify-between transition w-52 rounded-lg">
         <div>
           <div className="font-bold text-xl">{handleName(node.name)}</div>
           <div className="font-light text-sm">

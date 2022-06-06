@@ -11,11 +11,12 @@ export default function ProjectList() {
   return (
     <div
       id="projectlist"
-      className="bg-dark justify-center items-center w-full"
+      className="bg-dark justify-center items-center w-full py-10"
     >
+      <div className="px-4 pb-3 text-center w-full text-secondary font-bold text-xl">Pinned Repositories</div>
       {error && <div className="error">Check your token!</div>}
       {isPending && <div>Loading...</div>}
-      <div className="text-white py-4 gap-5 flex snap-x w-full snap-mandatory overflow-auto">
+      <div className="text-white py-4 gap-5 flex snap-x snap-mandatory overflow-auto">
         {projects &&
           projects.user.pinnedItems.edges.map(({ node }) => (
             <Card node={node} key={node.id} />

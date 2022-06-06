@@ -39,7 +39,7 @@ export default function Contact() {
 
   return (
     <form
-      className="flex flex-col items-center w-full bg-dark"
+      className="flex flex-col items-center w-full bg-dark pb-20"
       onSubmit={handleSubmit}
     >
       <div className="w-4/5 flex rounded-xl p-5 flex-col group lg:hover:shadow-smallDark items-center transition gap-5">

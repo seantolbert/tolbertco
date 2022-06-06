@@ -17,7 +17,7 @@ export default function Home() {
             I am a creative full-stack web developer accepting opportunities
           </p>
         </div>
-        <nav className="m-8 flex justify-start gap-10">
+        <nav className="m-8 flex justify-between gap-10">
           <a
             href="https://github.com/seantolbert"
             rel="noreferrer"
