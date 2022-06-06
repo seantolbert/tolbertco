@@ -8,7 +8,7 @@ import {
 export default function Home() {
   return (
     <>
-      <div id="home" className="bg-dark">
+      <div id="home" className="bg-dark py-4">
         <div className="m-4 overflow-hidden ">
           <p className="text-primary font-bold text-8xl ">
             Hey, my name is Sean
@@ -46,7 +46,6 @@ export default function Home() {
             </button>
           </a>
         </nav>
-        {/* <FlexGrid /> */}
       </div>
     </>
   );

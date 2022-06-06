@@ -20,6 +20,6 @@ module.exports = {
         primaryGlow: "0 0 2px #4dcfff",
       },
     },
-    plugins: [],
+    plugins: [require("tailwindcss-animation-delay")],
   },
 };

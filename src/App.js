@@ -8,21 +8,27 @@ import {
   FlexGrid,
 } from "./components/index";
 
+// hooks
+import { useWindowSize } from "@react-hook/window-size/throttled";
+
 // styles
 import "./App.css";
+import MobileDivider from "./components/MobileDivider";
+import GitContributions from "./components/GitContributions";
 
 function App() {
+  const [width] = useWindowSize({ fps: 30 });
+
   return (
     <div className="App h-screen w-screen bg-dark">
       {/* <MenuIcon /> */}
-      <FlexGrid/>
+      <FlexGrid />
       <Home />
-      <FlexGrid/>
+      {width > 1200 ? <FlexGrid /> : <MobileDivider />}
       <StatsBoard />
       <ProjectList />
-      <FlexGrid />
+      {width > 1200 ? <FlexGrid /> : <MobileDivider />}
       <Contact />
-      <FlexGrid />
     </div>
   );
 }

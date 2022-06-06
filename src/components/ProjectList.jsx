@@ -17,7 +17,7 @@ export default function ProjectList() {
     >
       {error && <div className="error">Check your token!</div>}
       {isPending && <div>Loading...</div>}
-      <div className="text-white grid grid-cols-3 gap-3 w-full projects">
+      <div className="text-white grid lg:grid-cols-3 md:grid-cols-2 gap-3 w-full projects">
         {projects &&
           projects.user.pinnedItems.edges.map(({ node }) => (
             <Card node={node} key={node.id} />
