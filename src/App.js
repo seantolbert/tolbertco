@@ -15,11 +15,10 @@ function App() {
   return (
     <div className="App h-screen bg-dark">
       <MenuIcon />
-      <FlexGrid />
+      <FlexGrid color="primary"/>
       <Home />
-      <FlexGrid />
+      <FlexGrid color="light"/>
       <StatsBoard />
-      <FlexGrid />
       <ProjectList />
       <FlexGrid />
       <Contact />
