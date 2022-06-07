@@ -85,11 +85,11 @@ export default function Card({ node }) {
               </div>
             ))}
           </div>
-          <div className="flex gap-1 flex-col md:flex-row">
+          <div className="flex gap-2 mt-2 md:mt-0 flex-col md:flex-row">
             {node.homepageUrl && (
               <a
                 href={node.homepageUrl}
-                className="rounded-full text-center w-10 transition duration-500 md:group-hover:shadow-smallDark"
+                className="rounded-full text-center w-10 transition duration-500 md:group-hover:shadow-smallDark flex justify-center items-center"
                 rel="noreferrer"
                 target="_blank"
               >
@@ -97,13 +97,13 @@ export default function Card({ node }) {
               </a>
             )}
             {!node.homepageUrl && (
-              <div className="rounded-full text-center w-10 transition duration-500 md:group-hover:shadow-smallDark">
+              <div className="rounded-full text-center w-10 transition duration-500 md:group-hover:shadow-smallDark flex justify-center items-center">
                 <FontAwesomeIcon icon={faEyeSlash} />
               </div>
             )}
             <a
               href={node.url}
-              className="rounded-full p-1 md:p-0 text-center w-10 transition duration-500 md:group-hover:shadow-smallDark"
+              className="rounded-full p-1 md:p-0 text-center w-10 transition duration-500 md:group-hover:shadow-smallDark flex justify-center items-center mt-2 md:mt-0"
               rel="noreferrer"
               target="_blank"
             >
