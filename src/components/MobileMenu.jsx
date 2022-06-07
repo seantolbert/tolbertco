@@ -1,9 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
-  faDna,
+  faMapPin,
   faBars,
-  faJedi,
+  faEnvelope,
+  faPaintRoller,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function MobileMenu() {
@@ -15,27 +16,33 @@ export default function MobileMenu() {
         </label>
         <input
           id="checker"
-          className="peer checked:w-6 checked:h-6 w-16 h-16 absolute z-203 opacity-0 "
+          className="peer checked:w-6 checked:h-6 w-16 h-16 absolute z-203 opacity-0"
           type="checkbox"
         />
 
         <a
           href="#home"
-          className="text-light text-2xl bg-primary rounded-lg h-16 w-16 peer-checked:flex peer-checked:justify-center peer-checked:items-center transition-all absolute hidden peer-checked:block peer-checked:-translate-y-16"
+          className="text-light text-2xl bg-primary rounded-lg h-16 w-16 peer-checked:flex peer-checked:justify-center peer-checked:items-center transition-all absolute hidden peer-checked:block peer-checked:-translate-y-20"
         >
           <FontAwesomeIcon icon={faHome} />
         </a>
         <a
           href="#pinned"
-          className="text-light text-2xl bg-darkGrey rounded-lg h-16 w-16 peer-checked:flex peer-checked:justify-center peer-checked:items-center transition-all absolute hidden peer-checked:block peer-checked:-translate-y-36"
+          className="text-light text-2xl bg-darkGrey rounded-lg h-16 w-16 peer-checked:flex peer-checked:justify-center peer-checked:items-center transition-all absolute hidden peer-checked:block peer-checked:-translate-y-40"
         >
-          <FontAwesomeIcon icon={faDna} />
+          <FontAwesomeIcon icon={faMapPin} />
+        </a>
+        <a
+          href="#contact"
+          className="text-light text-2xl bg-secondary rounded-lg h-16 w-16 peer-checked:flex peer-checked:justify-center peer-checked:items-center transition-all absolute hidden peer-checked:block peer-checked:-translate-y-60"
+        >
+          <FontAwesomeIcon icon={faEnvelope} />
         </a>
         <a
           href="theme"
-          className="text-light text-2xl bg-secondary rounded-lg h-16 w-16 peer-checked:flex peer-checked:justify-center peer-checked:items-center transition-all absolute hidden peer-checked:block peer-checked:-translate-y-56"
+          className="text-light text-2xl bg-lightGrey rounded-lg h-16 w-16 peer-checked:flex peer-checked:justify-center peer-checked:items-center transition-all absolute hidden peer-checked:block peer-checked:-translate-y-80"
         >
-          <FontAwesomeIcon icon={faJedi} />
+          <FontAwesomeIcon icon={faPaintRoller} />
         </a>
       </div>
     </nav>

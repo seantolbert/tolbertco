@@ -7,5 +7,4 @@ export default function MobileDivider() {
       <span className="bg-primary h-10 w-10 rounded-md"></span>
     </div>
   );
-  //   fill="#4dcfff"
 }

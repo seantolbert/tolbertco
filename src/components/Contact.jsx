@@ -27,21 +27,19 @@ export default function Contact() {
     };
     try {
       const result = await axios.post(formSparkUrl, payload);
+      console.log(result);
     } catch (err) {
       return err.message;
     }
   };
 
-  // const updateRecaptchaToken = (token) => {
-  //   setRecaptchaToken(token);
-  // };
-
   return (
     <form
+      id="contact"
       className="flex flex-col items-center w-full bg-dark pb-20"
       onSubmit={handleSubmit}
     >
-      <div className="w-3/5 flex rounded-xl p-5 flex-col group lg:hover:shadow-smallDark items-center transition gap-5">
+      <div className="md:w-3/5 w-full flex rounded-xl p-5 flex-col group lg:hover:shadow-smallDark items-center transition gap-5">
         <p className="text-4xl text-light">Contact</p>
         <p className="text-xl text-secondary">
           Have a question or want to work together?

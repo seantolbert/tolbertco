@@ -5,9 +5,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 :root {
-  --primary: #f4f4f4;
-  --secondary: #999;
-  --highlight: rgb(114, 217, 226);
+  --primary: #4dcfff;
+  --secondary: #99e4ff;
+  --highlight: #ffff00;
   --primary-color: rgb(145, 190, 226);
   --bg-color: rgb(123, 123, 123);
   --heading-font: "Bebas Neue", cursive;
@@ -33,7 +33,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* border: 1px solid red; */
+  /* outline: 1px solid red; */
 }
 
 textarea {
