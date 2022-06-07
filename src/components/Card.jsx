@@ -58,8 +58,8 @@ export default function Card({ node }) {
   };
 
   return (
-    <div className="mx-4 h-50 snap-center rounded-lg">
-      <div className="p-7 h-full flex flex-col shadow-smallDark justify-between transition w-52 rounded-lg">
+    <div className="mx-4 md:mx-0 h-50 md:h-64 snap-center rounded-lg">
+      <div className="group p-7 h-full flex flex-col shadow-smallDark justify-between transition w-52 md:w-full rounded-lg">
         <div>
           <div className="font-bold text-xl">{handleName(node.name)}</div>
           <div className="font-light text-sm">
@@ -67,14 +67,14 @@ export default function Card({ node }) {
             {node.createdAt}
           </div>
         </div>
-        <div className="group-hover:text-secondary text-sm transition duration-700">
+        <div className="group-hover:text-secondary text-sm md:text-lg transition duration-700">
           {node.description}
         </div>
         <div className="flex justify-between pt-1">
-          <div className="gap-2 grid grid-rows-2 grid-cols-3">
+          <div className="gap-2 grid grid-rows-2 grid-cols-3 md:flex md:flex-row">
             {node.repositoryTopics.edges.map(({ node }) => (
               <div
-                className="w-6 h-6 flex justify-center items-center"
+                className="pt-4 md:pt-0 w-6 h-6 md:w-8 md:h-8 flex justify-center items-center"
                 key={node.topic.name}
               >
                 <img
@@ -85,11 +85,11 @@ export default function Card({ node }) {
               </div>
             ))}
           </div>
-          <div className="flex gap-1 flex-col">
+          <div className="flex gap-1 flex-col md:flex-row">
             {node.homepageUrl && (
               <a
                 href={node.homepageUrl}
-                className="rounded-full text-center w-10 transition"
+                className="rounded-full text-center w-10 transition duration-500 md:group-hover:shadow-smallDark"
                 rel="noreferrer"
                 target="_blank"
               >
@@ -97,13 +97,13 @@ export default function Card({ node }) {
               </a>
             )}
             {!node.homepageUrl && (
-              <div className="rounded-full text-center w-10 transition">
+              <div className="rounded-full text-center w-10 transition duration-500 md:group-hover:shadow-smallDark">
                 <FontAwesomeIcon icon={faEyeSlash} />
               </div>
             )}
             <a
               href={node.url}
-              className="rounded-full p-1 text-center w-10 transition"
+              className="rounded-full p-1 md:p-0 text-center w-10 transition duration-500 md:group-hover:shadow-smallDark"
               rel="noreferrer"
               target="_blank"
             >
