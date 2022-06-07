@@ -10,7 +10,7 @@ export default function MobileMenu() {
   return (
     <nav className="flex justify-end z-200" role="navigation">
       <div className="transition duration-500 bg-lightGrey flex gap-4 m-5 justify-center items-center fixed top-3/4 height-screen h-fit w-fit rounded-full p-5 translate-y-20">
-        <label htmlFor="checker" className="absolute peer-checked:hidden">
+        <label htmlFor="checker" className="absolute peer-checked:hidden flex justify-center items-center">
           <FontAwesomeIcon icon={faBars} />
         </label>
         <input

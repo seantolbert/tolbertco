@@ -12,10 +12,10 @@ export default function ProjectList() {
 
   return (
     <div
-      id="projectlist"
+      id="pinned"
       className="bg-dark justify-center items-center w-full py-10"
     >
-      <div className="px-4 pb-3 text-center w-full text-secondary font-bold text-xl">
+      <div className="px-4 pb-3 text-center md:text-left md:text-3xl w-full text-secondary font-bold text-xl">
         Pinned Repositories
       </div>
       {error && <div className="error">Check your token!</div>}

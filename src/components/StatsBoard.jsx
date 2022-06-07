@@ -4,7 +4,7 @@ export default function StatsBoard() {
   const { error, isPending, data: facts } = useGitMetrics();
 
   return (
-    <div className="bg-dark py-4">
+    <div className="bg-dark py-4" id="stats">
       {error && <div className="error">Check your token</div>}
       {isPending && <div>Loading...</div>}
       <div className="flex flex-wrap gap-5 m-4 ">

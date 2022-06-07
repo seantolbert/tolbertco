@@ -12,25 +12,22 @@ import "./MenuIcon2.scss";
 export default function MenuIcon() {
   return (
     <div className="menu-container">
-      <span className="glow slide"></span>
-      <span className="glow slide-down"></span>
-      <span className="glow slide-down-further"></span>
       <div className="cube text-lightGrey">
-        <NavLink className="search" to="#home">
+        <div className="search" to="#home">
           <FontAwesomeIcon icon={faSearch} />
-        </NavLink>
+        </div>
         <span className="top bg-primary">
           <input type="text" className="bg-primary text-white w-full" />
         </span>
         <span className="left bg-secondary">
-          <NavLink to="#components">
+          <a href="#home">
             <FontAwesomeIcon icon={faHome} />
-          </NavLink>
+          </a>
         </span>
         <span className="right bg-darkGrey">
-          <NavLink to="#projectlist">
+          <a href="#pinned">
             <FontAwesomeIcon icon={faJedi} />
-          </NavLink>
+          </a>
         </span>
       </div>
     </div>
