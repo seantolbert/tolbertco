@@ -1,5 +1,5 @@
 import "./FlexGrid.scss";
-export default function FlexGrid({color}) {
+export default function FlexGrid() {
   const tiles = [];
   for (let i = 0; i < 1000; i++) {
     tiles.push(
@@ -8,7 +8,7 @@ export default function FlexGrid({color}) {
     );
   }
   return (
-    <div className="flex flex-wrap gap-1 overflow-hidden cursor-none w-full h-72 bg-dark">
+    <div className="flex flex-wrap gap-1 overflow-hidden cursor-none w-full md:h-72 h-36 bg-dark">
       {tiles}
     </div>
   );

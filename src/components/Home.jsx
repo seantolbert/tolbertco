@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <div id="home" className="bg-dark py-4">
-        <div className="m-4 overflow-hidden ">
+        <div className="m-4 overflow-hidden">
           <p className="text-primary font-bold text-8xl ">
             Hey, my name is Sean
           </p>
@@ -17,7 +17,7 @@ export default function Home() {
             I am a creative full-stack web developer accepting opportunities
           </p>
         </div>
-        <nav className="m-8 flex justify-between gap-10">
+        <nav className="m-8 flex justify-between md:justify-start gap-10">
           <a
             href="https://github.com/seantolbert"
             rel="noreferrer"

@@ -18,8 +18,9 @@ module.exports = {
         pressedMedDark:
           "inset 3px 3px 5px #353535, inset -3px -3px 5px #c1c1c1",
         primaryGlow: "0 0 2px #4dcfff",
+        smallLightGrey: "5px 5px 10px #656565, -5px -5px 10px #cdcdcd"
       },
     },
-    plugins: [require("tailwindcss-animation-delay")],
+    plugins: [],
   },
 };

@@ -25,7 +25,7 @@ const GET_PROJECTS = gql`
               createdAt
               description
               homepageUrl
-              repositoryTopics(first: 4) {
+              repositoryTopics(first: 6) {
                 edges {
                   node {
                     topic {
