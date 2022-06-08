@@ -9,13 +9,16 @@ export default function Home() {
   return (
     <>
       <div id="home" className="bg-dark py-4">
-        <div className="m-4 overflow-hidden">
-          <p className="text-primary font-bold text-8xl ">
+        <div className="m-4">
+          <p className="text-primary font-bold text-8xl h-fit">
             Hey, my name is Sean
           </p>
-          <p className="text-light text-4xl">
-            I am a creative full-stack web developer accepting opportunities
+          <p className="text-light text-3xl">
+            I am a trendy web developer
           </p>
+          <a href="#contact" className="text-secondary text-4xl rounded-lg">
+            come say hi!
+          </a>
         </div>
         <nav className="m-8 flex justify-between md:justify-start gap-10">
           <a
