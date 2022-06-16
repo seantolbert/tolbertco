@@ -8,18 +8,24 @@ import FirebaseLogo from "../assets/firebase.svg";
 import GraphqlLogo from "../assets/graphql.svg";
 import HerokuLogo from "../assets/heroku-icon.svg";
 import DockerLogo from "../assets/docker-icon.svg";
-import TailwindIcon from "../assets/tailwindcss-icon.svg";
+import TailwindLogo from "../assets/tailwindcss-icon.svg";
+import CSS3Logo from "../assets/css-3.svg";
+import HTMLLogo from "../assets/html-5.svg";
+import NodeLogo from "../assets/nodejs-icon.svg";
 
 export {
-    ReactLogo,
-    DjangoLogo,
-    PostgresqlLogo,
-    WagtailLogo,
-    BulmaLogo,
-    SassLogo,
-    FirebaseLogo,
-    GraphqlLogo,
-    HerokuLogo,
-    DockerLogo,
-    TailwindIcon
-}
+  ReactLogo,
+  DjangoLogo,
+  PostgresqlLogo,
+  WagtailLogo,
+  BulmaLogo,
+  SassLogo,
+  FirebaseLogo,
+  GraphqlLogo,
+  HerokuLogo,
+  DockerLogo,
+  TailwindLogo,
+  CSS3Logo,
+  HTMLLogo,
+  NodeLogo,
+};

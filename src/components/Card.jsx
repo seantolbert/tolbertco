@@ -1,7 +1,8 @@
+import { formatDistanceToNow } from "date-fns";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-
 import {
   ReactLogo,
   DjangoLogo,
@@ -13,7 +14,7 @@ import {
   GraphqlLogo,
   HerokuLogo,
   DockerLogo,
-  TailwindIcon,
+  TailwindLogo,
 } from "../assets/AssetIndex";
 
 export default function Card({ node }) {
@@ -49,7 +50,7 @@ export default function Card({ node }) {
       return DockerLogo;
     }
     if (name === "tailwind") {
-      return TailwindIcon;
+      return TailwindLogo;
     }
   };
 
@@ -64,7 +65,7 @@ export default function Card({ node }) {
           <div className="font-bold text-xl">{handleName(node.name)}</div>
           <div className="font-light text-sm">
             {/* {handleDate(node.createdAt)} */}
-            {node.createdAt}
+            {formatDistanceToNow(new Date(node.createdAt), { addSuffix: true })}
           </div>
         </div>
         <div className="group-hover:text-secondary text-sm md:text-lg transition duration-700">

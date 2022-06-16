@@ -9,14 +9,14 @@ export default function Home() {
   return (
     <>
       <div id="home" className="bg-dark py-4">
-        <div className="m-4">
+        <div className="flex flex-col gap-5">
           <p className="text-primary font-bold text-8xl h-fit">
             Hey, my name is Sean
           </p>
-          <p className="text-light text-3xl">
-            I am a trendy web developer
+          <p className="text-light text-8xl">
+            I am a straight up web developer
           </p>
-          <a href="#contact" className="text-secondary text-4xl rounded-lg">
+          <a href="#contact" className="text-secondary text-8xl rounded-lg">
             come say hi!
           </a>
         </div>

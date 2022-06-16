@@ -13,6 +13,7 @@ import GitContributions from "./components/GitContributions";
 
 // hooks
 import { useWindowSize } from "@react-hook/window-size/throttled";
+import {useTheme} from './hooks/useTheme'
 
 // styles
 import "./App.css";

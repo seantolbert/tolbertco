@@ -1,9 +1,9 @@
 import "./FlexGrid.scss";
 export default function FlexGrid() {
   const tiles = [];
-  for (let i = 0; i < 1000; i++) {
+  for (let i = 0; i < 500; i++) {
     tiles.push(
-      <div key={i} className="hover:bg-secondary rounded-sm w-5 h-5 even:animate-bounce node"></div>
+      <div key={i} className="hover:bg-secondary rounded-sm w-12 h-12 even:animate-bounce node"></div>
       // <div key={i} className={`hover:bg-secondary hover:animate-pulse animate-ping rounded-sm w-5 h-5 node`}></div>
     );
   }
