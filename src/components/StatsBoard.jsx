@@ -8,8 +8,10 @@ import {
   GraphqlLogo,
   HerokuLogo,
   HTMLLogo,
+  JSLogo,
   NodeLogo,
   PostgresqlLogo,
+  PythonLogo,
   ReactLogo,
   SassLogo,
   TailwindLogo,
@@ -33,14 +35,28 @@ export default function StatsBoard() {
     },
     { name: "GraphQL", link: "https://graphql.org/", icon: GraphqlLogo },
     { name: "Heroku", link: "https://heroku.com/", icon: HerokuLogo },
-    { name: "HTML", link: "", icon: HTMLLogo },
-    { name: "CSS3", link: "", icon: CSS3Logo },
+    {
+      name: "HTML",
+      link: "https://html.spec.whatwg.org/multipage/",
+      icon: HTMLLogo,
+    },
+    { name: "CSS3", link: "https://www.w3.org/TR/CSS/", icon: CSS3Logo },
     { name: "Nodejs", link: "https://nodejs.org/", icon: NodeLogo },
     { name: "Tailwind", link: "https://tailwindcss.com/", icon: TailwindLogo },
     { name: "Reactjs", link: "https://reactjs.org/", icon: ReactLogo },
-    { name: "PostgreSQL", link: "https://www.postgresql.org/", icon: PostgresqlLogo },
+    {
+      name: "PostgreSQL",
+      link: "https://www.postgresql.org/",
+      icon: PostgresqlLogo,
+    },
     { name: "Sass", link: "https://sass-lang.com/", icon: SassLogo },
     { name: "Wagtail", link: "https://wagtail.org/", icon: WagtailLogo },
+    {
+      name: "Javascript",
+      link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      icon: JSLogo,
+    },
+    { name: "Python", link: "https://www.python.org/", icon: PythonLogo },
   ];
 
   return (
@@ -87,7 +103,10 @@ export default function StatsBoard() {
           {facts && facts.user.location}
         </div>
         {techIKnow.map((tech) => (
-          <div className=" w-fit flex gap-2 font-bold text-secondary rounded-xl h-fit p-3 shadow-smallDark hover:shadow-medDark transition">
+          <div
+            key={tech.name}
+            className=" w-fit flex gap-2 font-bold text-secondary rounded-xl h-fit p-3 shadow-smallDark hover:shadow-medDark transition"
+          >
             <img src={tech.icon} alt={tech.name} className="w-full max-h-6" />
             <span>{tech.name}</span>
           </div>

@@ -4,6 +4,7 @@ import ProjectList from "./ProjectList";
 import Contact from "./Contact";
 import FlexGrid from "./FlexGrid";
 import StatsBoard from "./StatsBoard";
+import Footer from './Footer'
 
 export {
   Home,
@@ -11,5 +12,6 @@ export {
   ProjectList,
   Contact,
   FlexGrid,
-  StatsBoard
+  StatsBoard,
+  Footer
 };

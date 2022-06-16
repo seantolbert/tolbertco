@@ -6,6 +6,7 @@ import {
   MenuIcon,
   Contact,
   FlexGrid,
+  Footer
 } from "./components/index";
 import MobileDivider from "./components/MobileDivider";
 import MobileMenu from "./components/MobileMenu";
@@ -32,6 +33,7 @@ function App() {
       <ProjectList />
       {width >= 1200 ? <FlexGrid /> : <MobileDivider />}
       <Contact />
+      <Footer />
     </div>
   );
 }

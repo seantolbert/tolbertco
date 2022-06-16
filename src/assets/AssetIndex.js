@@ -12,6 +12,8 @@ import TailwindLogo from "../assets/tailwindcss-icon.svg";
 import CSS3Logo from "../assets/css-3.svg";
 import HTMLLogo from "../assets/html-5.svg";
 import NodeLogo from "../assets/nodejs-icon.svg";
+import PythonLogo from '../assets/python.svg'
+import JSLogo from '../assets/javascript.svg'
 
 export {
   ReactLogo,
@@ -28,4 +30,6 @@ export {
   CSS3Logo,
   HTMLLogo,
   NodeLogo,
+  PythonLogo,
+  JSLogo
 };
