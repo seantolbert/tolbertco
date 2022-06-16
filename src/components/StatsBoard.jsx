@@ -1,4 +1,5 @@
 import { useGitMetrics } from "../hooks/useGitMetrics";
+import { useWindowSize } from "@react-hook/window-size";
 
 import {
   BulmaLogo,
@@ -19,6 +20,7 @@ import {
 } from "../assets/AssetIndex";
 
 export default function StatsBoard() {
+  const [width] = useWindowSize({ fps: 30 });
   const { error, isPending, data: facts } = useGitMetrics();
 
   const techIKnow = [
@@ -107,7 +109,9 @@ export default function StatsBoard() {
             key={tech.name}
             className=" w-fit flex gap-2 font-bold text-secondary rounded-xl h-fit p-3 shadow-smallDark hover:shadow-medDark transition"
           >
-            <img src={tech.icon} alt={tech.name} className="w-full max-h-6" />
+            {width >= 600 && (
+              <img src={tech.icon} alt={tech.name} className="w-full max-h-6" />
+            )}
             <span>{tech.name}</span>
           </div>
         ))}

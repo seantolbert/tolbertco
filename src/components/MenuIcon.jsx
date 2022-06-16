@@ -1,10 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
-  // faDna,
   faJedi,
   faSearch,
-  // faBrush
 } from "@fortawesome/free-solid-svg-icons";
 import "./MenuIcon2.scss";
 
