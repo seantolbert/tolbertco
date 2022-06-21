@@ -14,6 +14,8 @@ import HTMLLogo from "../assets/html-5.svg";
 import NodeLogo from "../assets/nodejs-icon.svg";
 import PythonLogo from '../assets/python.svg'
 import JSLogo from '../assets/javascript.svg'
+import CRALogo from "../assets/create-react-app.svg"
+import ViteLogo from '../assets/vitejs.svg'
 
 export {
   ReactLogo,
@@ -31,5 +33,7 @@ export {
   HTMLLogo,
   NodeLogo,
   PythonLogo,
-  JSLogo
+  JSLogo,
+  CRALogo,
+  ViteLogo
 };

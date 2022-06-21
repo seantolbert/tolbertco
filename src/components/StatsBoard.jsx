@@ -3,6 +3,7 @@ import { useWindowSize } from "@react-hook/window-size";
 
 import {
   BulmaLogo,
+  CRALogo,
   CSS3Logo,
   DjangoLogo,
   FirebaseLogo,
@@ -16,6 +17,7 @@ import {
   ReactLogo,
   SassLogo,
   TailwindLogo,
+  ViteLogo,
   WagtailLogo,
 } from "../assets/AssetIndex";
 
@@ -59,6 +61,9 @@ export default function StatsBoard() {
       icon: JSLogo,
     },
     { name: "Python", link: "https://www.python.org/", icon: PythonLogo },
+    { name: "Vitejs", link: "https://vitejs.dev/", icon: ViteLogo },
+    { name: "CRA", link: "https://create-react-app.dev/", icon: CRALogo },
+
   ];
 
   return (
@@ -107,7 +112,7 @@ export default function StatsBoard() {
         {techIKnow.map((tech) => (
           <div
             key={tech.name}
-            className=" w-fit flex gap-2 font-bold text-secondary rounded-xl h-fit p-3 shadow-smallDark hover:shadow-medDark transition"
+            className="flex gap-2 font-bold text-secondary rounded-xl h-fit p-3 shadow-smallDark hover:shadow-medDark transition"
           >
             {width >= 600 && (
               <img src={tech.icon} alt={tech.name} className="w-full max-h-6" />
