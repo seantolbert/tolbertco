@@ -7,6 +7,7 @@ import {
   CSS3Logo,
   DjangoLogo,
   FirebaseLogo,
+  GitLogo,
   GraphqlLogo,
   HerokuLogo,
   HTMLLogo,
@@ -63,6 +64,7 @@ export default function StatsBoard() {
     { name: "Python", link: "https://www.python.org/", icon: PythonLogo },
     { name: "Vitejs", link: "https://vitejs.dev/", icon: ViteLogo },
     { name: "CRA", link: "https://create-react-app.dev/", icon: CRALogo },
+    { name: "Git", link: "https://git-scm.com/", icon: GitLogo },
 
   ];
 
