@@ -17,6 +17,7 @@ import JSLogo from "../assets/javascript.svg";
 import CRALogo from "../assets/create-react-app.svg";
 import ViteLogo from "../assets/vitejs.svg";
 import GitLogo from "../assets/git-icon.svg";
+import MUILogo from '../assets/material-ui.svg'
 
 export {
   ReactLogo,
@@ -37,5 +38,6 @@ export {
   JSLogo,
   CRALogo,
   ViteLogo,
-  GitLogo
+  GitLogo,
+  MUILogo
 };

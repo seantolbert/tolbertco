@@ -12,6 +12,7 @@ import {
   HerokuLogo,
   HTMLLogo,
   JSLogo,
+  MUILogo,
   NodeLogo,
   PostgresqlLogo,
   PythonLogo,
@@ -65,6 +66,7 @@ export default function StatsBoard() {
     { name: "Vitejs", link: "https://vitejs.dev/", icon: ViteLogo },
     { name: "CRA", link: "https://create-react-app.dev/", icon: CRALogo },
     { name: "Git", link: "https://git-scm.com/", icon: GitLogo },
+    { name: "MUI", link: "https://mui.com/", icon: MUILogo },
 
   ];
 

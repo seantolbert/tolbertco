@@ -12,45 +12,38 @@ import {
   SassLogo,
   FirebaseLogo,
   GraphqlLogo,
-  HerokuLogo,
   DockerLogo,
   TailwindLogo,
+  MUILogo,
 } from "../assets/AssetIndex";
 
 export default function Card({ node }) {
   const iconConverter = (name) => {
-    if (name === "react") {
-      return ReactLogo;
-    }
-    if (name === "django") {
-      return DjangoLogo;
-    }
-    if (name === "postgresql") {
-      return PostgresqlLogo;
-    }
-    if (name === "wagtail") {
-      return WagtailLogo;
-    }
-    if (name === "bulma") {
-      return BulmaLogo;
-    }
-    if (name === "scss") {
-      return SassLogo;
-    }
-    if (name === "firebase") {
-      return FirebaseLogo;
-    }
-    if (name === "graphql") {
-      return GraphqlLogo;
-    }
-    if (name === "heroku") {
-      return HerokuLogo;
-    }
-    if (name === "docker") {
-      return DockerLogo;
-    }
-    if (name === "tailwind") {
-      return TailwindLogo;
+    switch (name) {
+      case "react":
+        return ReactLogo;
+      case "django":
+        return DjangoLogo;
+      case "postgresql":
+        return PostgresqlLogo;
+      case "wagtail":
+        return WagtailLogo;
+      case "bulma":
+        return BulmaLogo;
+      case "scss":
+        return SassLogo;
+      case "firebase":
+        return FirebaseLogo;
+      case "graphql":
+        return GraphqlLogo;
+      case "docker":
+        return DockerLogo;
+      case "tailwind":
+        return TailwindLogo;
+      case "material-ui":
+        return MUILogo;
+      default:
+        return name;
     }
   };
 
