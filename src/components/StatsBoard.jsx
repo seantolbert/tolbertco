@@ -93,10 +93,10 @@ export default function StatsBoard() {
           <span className="text-secondary">
             Currently working on{" "}
             <a
-              href="https://github.com/seantolbert/achiever"
+              href="https://github.com/seantolbert/DRF_project"
               className="text-highlight font-light"
             >
-              Achiever
+              DRF_project
             </a>
           </span>
         </div>
