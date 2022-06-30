@@ -1,9 +1,9 @@
-import Menu from "./components/Menu";// pages and components
 import {
   Home,
   StatsBoard,
   ProjectList,
   MenuIcon,
+  Menu,
   Contact,
   FlexGrid,
   Footer
