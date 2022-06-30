@@ -1,4 +1,4 @@
-// pages and components
+import Menu from "./components/Menu";// pages and components
 import {
   Home,
   StatsBoard,
@@ -14,7 +14,7 @@ import GitContributions from "./components/GitContributions";
 
 // hooks
 import { useWindowSize } from "@react-hook/window-size/throttled";
-import {useTheme} from './hooks/useTheme'
+// import {useTheme} from './hooks/useTheme'
 
 // styles
 import "./App.css";
@@ -24,7 +24,8 @@ function App() {
 
   return (
     <div className="App h-screen w-screen bg-dark">
-      {width >= 1200 ? <MenuIcon /> : <MobileMenu />}
+      {/* {width >= 1200 ? <MenuIcon /> : <MobileMenu />} */}
+      <Menu />
       <FlexGrid />
       <Home />
       {width >= 1200 ? <FlexGrid /> : <MobileDivider />}
