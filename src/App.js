@@ -1,16 +1,15 @@
 import {
   Home,
+  MobileDivider,
+  MobileMenu,
+  GitContributions,
   StatsBoard,
   ProjectList,
-  MenuIcon,
   Menu,
   Contact,
   FlexGrid,
-  Footer
+  Footer,
 } from "./components/index";
-import MobileDivider from "./components/MobileDivider";
-import MobileMenu from "./components/MobileMenu";
-import GitContributions from "./components/GitContributions";
 
 // hooks
 import { useWindowSize } from "@react-hook/window-size/throttled";
@@ -24,8 +23,7 @@ function App() {
 
   return (
     <div className="App h-screen w-screen bg-dark">
-      {/* {width >= 1200 ? <MenuIcon /> : <MobileMenu />} */}
-      <Menu />
+      {width >= 1200 ? <Menu /> : <MobileMenu />}
       <FlexGrid />
       <Home />
       {width >= 1200 ? <FlexGrid /> : <MobileDivider />}

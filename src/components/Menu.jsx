@@ -7,8 +7,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-import "./MenuIcon2.scss";
-
 export default function Menu() {
   return (
     <div className="flex fixed right-0 mt-10 mr-10 ml-20 mb-20 group flex-col z-[500] gap-6">
