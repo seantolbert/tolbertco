@@ -116,7 +116,7 @@ export default function StatsBoard() {
         {techIKnow.map((tech) => (
           <div
             key={tech.name}
-            className="flex gap-2 font-bold text-secondary rounded-xl h-fit p-3 shadow-smallDark hover:shadow-medDark transition"
+            className="flex gap-2 font-bold text-secondary rounded-xl h-fit w-fit p-3 shadow-smallDark hover:shadow-medDark transition"
           >
             {width >= 600 && (
               <img src={tech.icon} alt={tech.name} className="w-full max-h-6" />
