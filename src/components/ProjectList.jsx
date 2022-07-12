@@ -29,7 +29,7 @@ export default function ProjectList() {
             ))}
         </div>
       ) : (
-        <div className=" m-4 text-white py-4 gap-5 grid grid-cols-2 lg:grid-cols-3">
+        <div className=" m-4 text-white py-4 gap-5 grid grid-cols-3">
           {projects &&
             projects.user.pinnedItems.edges.map(({ node }) => (
               <Card node={node} key={node.id} />

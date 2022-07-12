@@ -11,7 +11,7 @@ import {
 export default function WeatherIcons({ weather }) {
   return (
     <div className="pb-5 flex justify-center items-center">
-      {weather === "clear sk" && (
+      {weather === "clear sky" && (
         <FontAwesomeIcon
           icon={faSun}
           className="text-6xl text-yellow-300 group-hover:rotate-90 transition duration-500"
