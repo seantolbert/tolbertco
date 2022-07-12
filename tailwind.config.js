@@ -19,8 +19,7 @@ module.exports = {
           "inset 3px 3px 5px #353535, inset -3px -3px 5px #c1c1c1",
         primaryGlow: "0 0 2px #4dcfff",
         smallLightGrey: "5px 5px 10px #656565, -5px -5px 10px #cdcdcd",
-
-        neuMenu: "20px 20px 0px #5a5a5a, -20px -20px 0px #ffffff"
+        neuMenu: "20px 20px 0px #5a5a5a, -20px -20px 0px #ffffff",
       },
     },
     plugins: [],

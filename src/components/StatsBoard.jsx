@@ -67,7 +67,6 @@ export default function StatsBoard() {
     { name: "CRA", link: "https://create-react-app.dev/", icon: CRALogo },
     { name: "Git", link: "https://git-scm.com/", icon: GitLogo },
     { name: "MUI", link: "https://mui.com/", icon: MUILogo },
-
   ];
 
   return (
@@ -116,7 +115,7 @@ export default function StatsBoard() {
         {techIKnow.map((tech) => (
           <div
             key={tech.name}
-            className="flex gap-2 font-bold text-secondary rounded-xl h-fit w-fit p-3 shadow-smallDark hover:shadow-medDark transition"
+            className="flex justify-between gap-2 font-bold text-secondary rounded-xl h-fit w-fit p-3 shadow-smallDark hover:shadow-medDark transition"
           >
             {width >= 600 && (
               <img src={tech.icon} alt={tech.name} className="w-full max-h-6" />

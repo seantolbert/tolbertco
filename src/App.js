@@ -17,6 +17,7 @@ import { useWindowSize } from "@react-hook/window-size/throttled";
 
 // styles
 import "./App.css";
+import WeatherPanel from "./components/WeatherPanel";
 
 function App() {
   const [width] = useWindowSize({ fps: 30 });
@@ -31,6 +32,7 @@ function App() {
       {width >= 1200 && <GitContributions />}
       <ProjectList />
       {width >= 1200 ? <FlexGrid /> : <MobileDivider />}
+      <WeatherPanel />
       <Contact />
       <Footer />
     </div>

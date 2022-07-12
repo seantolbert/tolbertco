@@ -13,7 +13,7 @@ export default function Home() {
           <p className="text-primary font-bold text-8xl h-fit">
             Hey, my name is Sean
           </p>
-          <p className="text-light text-8xl">
+          <p className="text-light text-6xl">
             I am a straight up web developer
           </p>
           <a href="#contact" className="text-secondary text-8xl rounded-lg">
