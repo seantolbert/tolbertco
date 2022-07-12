@@ -38,11 +38,11 @@ export default function WeatherPanel() {
                 <>
                   <FontAwesomeIcon
                     icon={faCloud}
-                    className="text-6xl text-stone-200"
+                    className="text-5xl text-stone-200 translate-x-4"
                   />
                   <FontAwesomeIcon
                     icon={faCloud}
-                    className="text-6xl text-stone-300 -translate-x-10 translate-y-2 group-hover:-translate-x-12 group-hover:translate-y-1 transition duration-500"
+                    className="text-5xl text-stone-300 -translate-x-10 translate-y-2 group-hover:-translate-x-12 group-hover:translate-y-1 transition duration-500"
                   />
                 </>
               )}
@@ -86,15 +86,15 @@ export default function WeatherPanel() {
             </div>
           </div>
           <div className="text-light flex flex-col justify-center items-center">
-            <div className="font-bold text-5xl pb-8">{Math.round(data.main.feels_like)}&#xb0;</div>
+            <div className="font-bold text-4xl lg:text-5xl pb-8">{Math.round(data.main.feels_like)}&#xb0;</div>
             <div className="font-semibold">Feels like</div>
           </div>
           <div className="text-white flex flex-col justify-center items-center">
-            <div className="font-bold text-5xl pb-8">{Math.round(data.main.temp)}&#xb0;</div>
+            <div className="font-bold text-4xl lg:text-5xl pb-8">{Math.round(data.main.temp)}&#xb0;</div>
             <div className="font-semibold">Actual</div>
           </div>
           <div className="text-white flex flex-col justify-center items-center">
-            <div className="font-bold text-5xl pb-8">{data.main.humidity}%</div>
+            <div className="font-bold text-4xl lg:text-5xl pb-8">{data.main.humidity}%</div>
             <div className="font-semibold">Humidity</div>
           </div>
         </div>
