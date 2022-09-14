@@ -8,6 +8,7 @@ import Menu from "./Menu";
 import GitContributions from "./GitContributions";
 import MobileDivider from "./MobileDivider";
 import MobileMenu from "./MobileMenu";
+import JOD from "./JOD";
 
 export {
   Home,
@@ -19,5 +20,6 @@ export {
   FlexGrid,
   MobileDivider,
   StatsBoard,
+  JOD,
   Footer,
 };

@@ -8,6 +8,7 @@ import {
   Menu,
   Contact,
   FlexGrid,
+  JOD,
   Footer,
 } from "./components/index";
 
@@ -17,7 +18,7 @@ import { useWindowSize } from "@react-hook/window-size/throttled";
 
 // styles
 import "./App.css";
-import WeatherPanel from "./components/WeatherPanel";
+// import WeatherPanel from "./components/WeatherPanel";
 
 function App() {
   const [width] = useWindowSize({ fps: 30 });
@@ -32,7 +33,8 @@ function App() {
       {width >= 1200 && <GitContributions />}
       <ProjectList />
       {width >= 1200 ? <FlexGrid /> : <MobileDivider />}
-      <WeatherPanel />
+      {/* <WeatherPanel /> */}
+      <JOD />
       <Contact />
       <Footer />
     </div>
