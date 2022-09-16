@@ -4,6 +4,7 @@ import {
   faCircleInfo,
   faLayerGroup,
   faAt,
+  faLink
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -46,6 +47,12 @@ export default function MobileMenu() {
           className="text-light text-2xl bg-lightGrey rounded-lg h-16 w-16 flex justify-center items-center translate-x-52 transition duration-600 absolute peer-checked:translate-x-0 -translate-y-80"
         >
           <FontAwesomeIcon icon={faCircleInfo} />
+        </a>
+        <a
+          href="#JOD"
+          className="text-light text-2xl bg-lightGrey rounded-lg h-16 w-16 flex justify-center items-center translate-x-52 transition duration-600 absolute peer-checked:translate-x-0 -translate-y-[25rem]"
+        >
+          <FontAwesomeIcon icon={faLink} />
         </a>
       </div>
     </nav>
