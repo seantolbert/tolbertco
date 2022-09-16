@@ -4,6 +4,7 @@ import {
   faCircleInfo,
   faAt,
   faLayerGroup,
+  faLink,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -44,6 +45,17 @@ export default function Menu() {
         </div>
       </div>
       <div className="duration-700 flex justify-center items-center w-14 h-14 bg-primary skew-x-12 skew-y-12 -rotate-45 -translate-y-60 transition group-hover:transform-none group-hover:rounded-md group-hover:bg-darkGrey">
+        <a
+          href="#JOD"
+          className="peer w-full h-full flex justify-center items-center text-light transition duration-500 rounded-md opacity-0 group-hover:opacity-100"
+        >
+          <FontAwesomeIcon icon={faLink} />
+        </a>
+        <div className="z-[-10] transition duration-700 absolute text-white translate-x-52 opacity-0 group-hover:peer-hover:-translate-x-20 group-hover:peer-hover:opacity-100 font-bold">
+          JOD
+        </div>
+      </div>
+      <div className="duration-700 flex justify-center items-center w-14 h-14 bg-primary skew-x-12 skew-y-12 -rotate-45 -translate-y-60 translate-x-96 transition group-hover:transform-none group-hover:rounded-md group-hover:bg-darkGrey">
         <a
           href="#contact"
           className="peer w-full h-full flex justify-center items-center text-light transition duration-500 rounded-md opacity-0 group-hover:opacity-100"

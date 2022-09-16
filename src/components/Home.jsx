@@ -14,7 +14,7 @@ export default function Home() {
             Hey, my name is Sean
           </p>
           <p className="text-light text-6xl">
-            I am a straight up web developer
+            I make web apps and Shopify storefronts!
           </p>
           <a href="#contact" className="text-secondary text-8xl rounded-lg">
             come say hi!
@@ -26,9 +26,7 @@ export default function Home() {
             rel="noreferrer"
             target="_blank"
           >
-            <button
-              className="text-5xl text-white hover:text-secondary transition hover:shadow-medDark active:shadow-pressedMedDark duration-500 nav-button p-3 rounded-full"
-            >
+            <button className="text-5xl text-white hover:text-secondary transition hover:shadow-medDark active:shadow-pressedMedDark duration-500 nav-button p-3 rounded-full">
               <FontAwesomeIcon icon={faGithub} />
             </button>
           </a>
