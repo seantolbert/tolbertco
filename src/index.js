@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App";
+import Projects from "./pages/Projects";
 import { setContext } from "@apollo/client/link/context";
 import {
   ApolloClient,
@@ -34,7 +35,10 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ApolloProvider client={client}>
-        <App />
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
       </ApolloProvider>
     </BrowserRouter>
   </React.StrictMode>
