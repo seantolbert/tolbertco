@@ -7,7 +7,11 @@ export default function BirthdayList() {
   return (
     <main className="" id="birthdays">
       <h3 className="text-primary text-2xl">
-        {people.length} Birthdays coming up
+        {people ? (
+          <p>{people.length} Birthdays coming up</p>
+        ) : (
+          <p>No Birthdays coming up</p>
+        )}
       </h3>
       {people &&
         people.map((person) => (
