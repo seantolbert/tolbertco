@@ -5,7 +5,7 @@ export default function BirthdayList() {
   const { documents: people } = useCollection("people");
 
   return (
-    <main className="" id="birthdays">
+    <main className="max-w-md" id="birthdays">
       <h3 className="text-primary text-2xl">
         {people ? (
           <p>{people.length} Birthdays coming up</p>
