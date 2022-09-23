@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function BirsthdayListItem({person}) {
+export default function BirthdayListItem({person}) {
   return (
     <div>
         <h3>
