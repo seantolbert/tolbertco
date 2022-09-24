@@ -11,20 +11,14 @@ export default function BirthdayCreate() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const ref = collection(db, "people");
-    if (birthday === "") {
-      await addDoc(ref, {
-        firstName,
-        lastName,
-        age,
-      });
-    } else {
-      await addDoc(ref, {
-        firstName,
-        lastName,
-        birthday,
-        age,
-      });
-    }
+
+    await addDoc(ref, {
+      firstName,
+      lastName,
+      birthday,
+      age,
+    });
+
     setBirthday("");
     setFirstName("");
     setLastName("");
@@ -32,20 +26,21 @@ export default function BirthdayCreate() {
   };
 
   return (
-    <div className="flex flex-col max-w-md">
-      <h4 className="text-secondary">Add Birthday</h4>
-      <form onSubmit={handleSubmit} className="flex flex-col w-full gap-3">
+    <div className="flex flex-col">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
         <input
           type="text"
           placeholder="First Name"
           onChange={(e) => setFirstName(e.target.value)}
           value={firstName}
+          required
         />
         <input
           type="text"
           placeholder="Last Name"
           onChange={(e) => setLastName(e.target.value)}
           value={lastName}
+          required
         />
         <div className="flex justify-between">
           <input
@@ -53,12 +48,14 @@ export default function BirthdayCreate() {
             type="date"
             onChange={(e) => setBirthday(e.target.value)}
             value={birthday}
+            required
           />
           <input
             className="w-1/3"
             type="number"
             placeholder="Age"
             onChange={(e) => setAge(e.target.value)}
+            required
           />
         </div>
         <button className="text-primary" type="submit">
