@@ -26,7 +26,7 @@ export default function BirthdayCreate() {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col h-full">
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
         <input
           className="p-2 shadow-pressedMedDark focus:shadow-smallDark rounded-md text-primary caret-primary bg-transparent"

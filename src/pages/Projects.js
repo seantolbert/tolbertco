@@ -6,8 +6,8 @@ export default function Projects() {
     <main className="p-2">
       <h1 className="text-primary text-3xl font-bold mb-10">React Demo Projects</h1>
       <div className="flex flex-wrap gap-5 justify-center md:justify-start">
-        <BirthdayList />
         <ColorList />
+        <BirthdayList />
       </div>
     </main>
   );
