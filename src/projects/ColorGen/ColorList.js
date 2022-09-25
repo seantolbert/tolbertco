@@ -6,7 +6,7 @@ import Values from "values.js";
 export default function ColorList() {
   const [color, setColor] = useState("#f6b73c");
   const [error, setError] = useState(false);
-  const [list, setList] = useState(new Values('#f6b73c').all(10));
+  const [list, setList] = useState(new Values("#f6b73c").all(10));
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,9 +29,15 @@ export default function ColorList() {
       <div>
         <form onSubmit={handleSubmit} className="flex justify-evenly">
           <input
+            className="h-12 bg-transparent border-0"
+            type="color"
+            value={color}
+            onChange={(e) => setColor(e.target.value)}
+          />
+          <input
+            className="text-primary bg-transparent rounded-md shadow-pressedMedDark focus:shadow-smallDark p-2 w-24"
             placeholder="#"
             type="text"
-            className="text-primary bg-transparent rounded-md shadow-pressedMedDark focus:shadow-smallDark p-2"
             onChange={(e) => setColor(e.target.value)}
             value={color}
           />
@@ -59,7 +65,14 @@ export default function ColorList() {
       <div className="flex flex-wrap justify-center gap-1">
         {list.map((color, index) => {
           console.log(color);
-          return <SingleColor key={index} {...color} index={index} hexColor={color.hex} />;
+          return (
+            <SingleColor
+              key={index}
+              {...color}
+              index={index}
+              hexColor={color.hex}
+            />
+          );
         })}
       </div>
     </main>

@@ -28,7 +28,7 @@ export default function BirthdayList() {
 
   return (
     <main
-      className="max-w-xl min-h-96 rounded-lg p-2 flex flex-col justify-center gap-5 group shadow-smallDark"
+      className="max-w-xl h-fit rounded-lg p-2 flex flex-col justify-center gap-5 group shadow-smallDark"
       id="birthdays"
     >
       <p className="text-light text-4xl font-extrabold">Birthday List</p>
