@@ -8,6 +8,8 @@ export default function BirthdayList() {
   const [showEdit, setShowEdit] = useState(false);
   const [filter, setFilter] = useState(true);
 
+  console.log(people);
+
   // grab the date 3 months from now and current date
   let laterDate = new Date(new Date().setMonth(new Date().getMonth() + 3));
   let today = new Date();
@@ -37,23 +39,30 @@ export default function BirthdayList() {
           <p>No Birthdays coming up over the next 3 months</p>
         )}
       </h3>
-      <div className="flex flex-col gap-3 max-h-52 overflow-scroll">
-        {people && filter
-          ? agingPeople.map((person) => (
-              <BirthdayListItem
-                key={person.id}
-                person={person}
-                show={showEdit}
-              />
-            ))
-          : people.map((person) => (
+
+      {filter ? (
+        <div className="flex flex-col gap-3 max-h-52 overflow-scroll">
+          {people &&
+            agingPeople.map((person) => (
               <BirthdayListItem
                 key={person.id}
                 person={person}
                 show={showEdit}
               />
             ))}
-      </div>
+        </div>
+      ) : (
+        <div className="flex flex-col gap-3 max-h-52 overflow-scroll">
+          {people &&
+            people.map((person) => (
+              <BirthdayListItem
+                key={person.id}
+                person={person}
+                show={showEdit}
+              />
+            ))}
+        </div>
+      )}
       <div className="flex gap-4 items-center">
         <button
           className="text-primary font-bold transition duration-500 group-hover:shadow-smallDark active:shadow-pressedMedDark w-fit rounded p-2"
