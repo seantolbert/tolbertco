@@ -60,7 +60,10 @@ export default function BirthdayCreate() {
             required
           />
         </div>
-        <button className="text-primary shadow-smallDark active:shadow-pressedMedDark rounded-md text-xl font-bold p-2" type="submit">
+        <button
+          className="text-primary shadow-smallDark active:shadow-pressedMedDark rounded-md text-xl font-bold p-2"
+          type="submit"
+        >
           Submit
         </button>
       </form>

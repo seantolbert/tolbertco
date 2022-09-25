@@ -8,8 +8,6 @@ export default function BirthdayList() {
   const [showEdit, setShowEdit] = useState(false);
   const [filter, setFilter] = useState(true);
 
-  console.log(people);
-
   // grab the date 3 months from now and current date
   let laterDate = new Date(new Date().setMonth(new Date().getMonth() + 3));
   let today = new Date();
@@ -34,11 +32,30 @@ export default function BirthdayList() {
     >
       <h3 className="text-primary text-2xl">
         {people && agingPeople.length !== 0 ? (
-          <p>{agingPeople.length} Birthdays coming up over the next 3 months</p>
+          <p>
+            {agingPeople.length} Birthday{agingPeople.length < 0 ? "s" : ""}{" "}
+            coming up over the next 3 months
+          </p>
         ) : (
           <p>No Birthdays coming up over the next 3 months</p>
         )}
       </h3>
+
+      <div className="flex gap-4 justify-between items-center">
+        <button
+          className="text-primary font-bold transition duration-500 group-hover:shadow-smallDark active:shadow-pressedMedDark w-fit rounded p-2"
+          onClick={() => setShowEdit(!showEdit)}
+        >
+          {showEdit ? "Cancel" : "Add/Delete"}
+        </button>
+        <button
+          onClick={() => setFilter(!filter)}
+          className="text-primary font-bold transition duration-500 group-hover:shadow-smallDark active:shadow-pressedMedDark rounded p-2"
+        >
+          {filter ? "Show All" : "Next 3 months"}
+        </button>
+      </div>
+      {showEdit && <BirthdayCreate />}
 
       {filter ? (
         <div className="flex flex-col gap-3 max-h-52 overflow-scroll">
@@ -63,25 +80,11 @@ export default function BirthdayList() {
             ))}
         </div>
       )}
-      <div className="flex gap-4 items-center">
-        <button
-          className="text-primary font-bold transition duration-500 group-hover:shadow-smallDark active:shadow-pressedMedDark w-fit rounded p-2"
-          onClick={() => setShowEdit(!showEdit)}
-        >
-          {showEdit ? "Cancel" : "Edit"}
-        </button>
-        <button
-          onClick={() => setFilter(!filter)}
-          className="text-primary font-bold transition duration-500 group-hover:shadow-smallDark active:shadow-pressedMedDark rounded p-2"
-        >
-          {filter ? "Show All" : "Next 3 months"}
-        </button>
-
-        {/* potential filtering method */}
-        {/* {filter && (
+      {/* potential filtering method */}
+      {/* {filter && (
           <>
-            <input
-              className="w-10 text-2xl bg-transparent text-light flex justify-center items-center"
+          <input
+          className="w-10 text-2xl bg-transparent text-light flex justify-center items-center"
               type="number"
               value={timeDistance}
               onChange={(e) => setTimeDistance(e.target.value)}
@@ -89,9 +92,6 @@ export default function BirthdayList() {
             <div className="text-primary font-bold w-96">Months</div>
           </>
         )} */}
-      </div>
-
-      {showEdit && <BirthdayCreate />}
     </main>
   );
 }
