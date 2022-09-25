@@ -5,7 +5,8 @@ import { useState } from "react";
 
 export default function BirthdayList() {
   const { documents: people } = useCollection("people");
-  const [showEdit, setShowEdit] = useState(false);
+  const [showDelete, setShowDelete] = useState(false);
+  const [showAdd, setShowAdd] = useState(false);
   const [filter, setFilter] = useState(true);
 
   // grab the date 3 months from now and current date
@@ -27,27 +28,31 @@ export default function BirthdayList() {
 
   return (
     <main
-      className="max-w-sm rounded-lg p-2 flex flex-col justify-center gap-5 group shadow-smallDark"
+      className="bg-dark max-w-xl min-h-96 rounded-lg p-2 flex flex-col justify-center gap-5 group shadow-smallDark"
       id="birthdays"
     >
-      <h3 className="text-primary text-2xl">
-        {people && agingPeople.length !== 0 ? (
-          <p>
-            {agingPeople.length} Birthday{agingPeople.length < 0 ? "s" : ""}{" "}
-            coming up over the next 3 months
-          </p>
-        ) : (
-          <p>No Birthdays coming up over the next 3 months</p>
-        )}
-      </h3>
-
+      <p className="text-light text-4xl font-extrabold">Birthday List</p>
       <div className="flex gap-4 justify-between items-center">
-        <button
-          className="text-primary font-bold transition duration-500 group-hover:shadow-smallDark active:shadow-pressedMedDark w-fit rounded p-2"
-          onClick={() => setShowEdit(!showEdit)}
-        >
-          {showEdit ? "Cancel" : "Add/Delete"}
-        </button>
+        <div className="flex gap-5">
+          <button
+            className={`${
+              showAdd ? "text-rose-300 shadow-pressedMedDark" : "text-primary"
+            } font-bold transition duration-500 rounded p-2`}
+            onClick={() => setShowAdd(!showAdd)}
+          >
+            Add
+          </button>
+          <button
+            className={`${
+              showDelete
+                ? "text-rose-300 shadow-pressedMedDark"
+                : "text-primary"
+            } font-bold transition duration-500   rounded p-2`}
+            onClick={() => setShowDelete(!showDelete)}
+          >
+            Delete
+          </button>
+        </div>
         <button
           onClick={() => setFilter(!filter)}
           className="text-primary font-bold transition duration-500 group-hover:shadow-smallDark active:shadow-pressedMedDark rounded p-2"
@@ -55,43 +60,31 @@ export default function BirthdayList() {
           {filter ? "Show All" : "Next 3 months"}
         </button>
       </div>
-      {showEdit && <BirthdayCreate />}
+      {showAdd && <BirthdayCreate />}
 
       {filter ? (
-        <div className="flex flex-col gap-3 max-h-52 overflow-scroll">
+        <div className="flex flex-col gap-3 max-h-96 overflow-scroll">
           {people &&
             agingPeople.map((person) => (
               <BirthdayListItem
                 key={person.id}
                 person={person}
-                show={showEdit}
+                show={showDelete}
               />
             ))}
         </div>
       ) : (
-        <div className="flex flex-col gap-3 max-h-52 overflow-scroll">
+        <div className="flex flex-col gap-3 max-h-96 overflow-scroll">
           {people &&
             people.map((person) => (
               <BirthdayListItem
                 key={person.id}
                 person={person}
-                show={showEdit}
+                show={showDelete}
               />
             ))}
         </div>
       )}
-      {/* potential filtering method */}
-      {/* {filter && (
-          <>
-          <input
-          className="w-10 text-2xl bg-transparent text-light flex justify-center items-center"
-              type="number"
-              value={timeDistance}
-              onChange={(e) => setTimeDistance(e.target.value)}
-            />
-            <div className="text-primary font-bold w-96">Months</div>
-          </>
-        )} */}
     </main>
   );
 }

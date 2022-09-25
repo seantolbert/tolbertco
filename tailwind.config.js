@@ -20,6 +20,8 @@ module.exports = {
         primaryGlow: "0 0 2px #4dcfff",
         smallLightGrey: "5px 5px 10px #656565, -5px -5px 10px #cdcdcd",
         neuMenu: "20px 20px 0px #5a5a5a, -20px -20px 0px #ffffff",
+        // secondary:  "12px 12px 24px #689bad, -12px -12px 24px #caffff",
+        secondary: " 12px 12px 24px #456773, -12px -12px 24px #edffff",
       },
     },
     plugins: [],
