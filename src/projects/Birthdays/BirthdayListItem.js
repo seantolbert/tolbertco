@@ -12,29 +12,33 @@ export default function BirthdayListItem({ person, show }) {
     await deleteDoc(docRef);
   };
 
-  let month = new Date(birthday).toLocaleDateString("en-US", {
-    month: "short",
-  });
-  let day = new Date(birthday).toLocaleDateString("en-US", {
-    day: "2-digit",
-  });
+  // console.log(birthday)
 
-  console.log(month)
-  console.log(day)
 
+ 
+
+  // console.log(month);
+  // console.log(day);
 
   return (
-    <div className="flex gap-2">
-      <div className="bg-white w-14 h-14 rounded-full flex justify-center items-center text-2xl font-bold">
-        {firstName[0].toUpperCase() + lastName[0].toUpperCase()}
-      </div>
-      <div className="flex flex-col">
-        <h3 className="text-secondary font-extrabold">{`${firstName} ${lastName}`}</h3>
-        <p className="text-secondary text-sm">{formatDistanceToNowStrict(new Date(birthday))}</p>
+    <div className="flex justify-between">
+      <div className="flex gap-2">
+        <div className="bg-white w-14 h-14 rounded-full flex justify-center items-center text-2xl font-bold">
+          {firstName[0].toUpperCase() + lastName[0].toUpperCase()}
+        </div>
+        <div className="flex flex-col">
+          <h3 className="text-secondary font-extrabold">{`${firstName} ${lastName}`}</h3>
+          <p className="text-secondary text-sm">
+            {formatDistanceToNowStrict(new Date(birthday))}
+          </p>
+          <p className="text-secondary text-sm">
+            {birthday}
+          </p>
+        </div>
       </div>
       {show && (
         <div
-          className="text-light cursor-pointer"
+          className="text-light cursor-pointer mr-5"
           onClick={() => handleDelete(id)}
         >
           <FontAwesomeIcon icon={faDeleteLeft} />
