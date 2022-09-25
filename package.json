@@ -27,6 +27,7 @@
     "react-scripts": "5.0.1",
     "sass": "^1.52.1",
     "tailwindcss-animation-delay": "^1.0.7",
+    "values.js": "^2.1.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
