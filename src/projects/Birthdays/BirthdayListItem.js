@@ -17,7 +17,7 @@ export default function BirthdayListItem({ person, show }) {
   const snagDay = (d) => new Date(d).getDate() + 1;
 
   return (
-    <div className="flex justify-between bg-gradient-to-r from-primary to-secondary p-2 rounded-md">
+    <div className="flex justify-between bg-gradient-to-r from-primary to-secondary p-2 rounded-md transition duration-300 hover:scale-95">
       <div className="flex gap-5 items-center">
         <div className="bg-white w-14 h-14 rounded-full flex justify-center items-center text-2xl font-bold">
           {firstName[0].toUpperCase() + lastName[0].toUpperCase()}
