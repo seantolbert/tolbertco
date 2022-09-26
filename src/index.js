@@ -11,6 +11,7 @@ import {
   InMemoryCache,
   createHttpLink,
 } from "@apollo/client";
+import Alt from "./pages/Alt";
 
 const httpLink = createHttpLink({
   uri: "https://api.github.com/graphql",
@@ -38,6 +39,7 @@ root.render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/alt" element={<Alt />} />
         </Routes>
       </ApolloProvider>
     </BrowserRouter>

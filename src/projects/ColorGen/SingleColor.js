@@ -20,12 +20,14 @@ export default function SingleColor({ rgb, weight, index, hexColor }) {
         navigator.clipboard.writeText(hexValue);
       }}
       style={{ backgroundColor: `rgb(${bgColor})` }}
-      className={`h-20 w-20 text-sm font-bold ${
-        index > 10 && "text-light"
-      } rounded-md p-1 cursor-pointer transition duration-300 hover:scale-95`}
+      className={` ${
+        index > 20 && "text-light"
+      } h-20 w-20 text-sm font-bold rounded-md p-1 cursor-pointer transition duration-300 hover:scale-95 flex flex-col justify-between `}
     >
-      <p>{weight}%</p>
-      <p>{hexValue}</p>
+      <div className="">
+        <p>{weight}%</p>
+        <p>{hexValue}</p>
+      </div>
       {alert && <p>Copied</p>}
     </article>
   );

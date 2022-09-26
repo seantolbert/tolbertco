@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import { Transition } from "@tailwindui/react";
 
 // firebase
 import { useCollection } from "../../hooks/useCollection";
-// hooks
-import useMountTransition from "../../hooks/useMountTransition";
 // components
 import BirthdayCreate from "./BirthdayCreate";
 import BirthdayListItem from "./BirthdayListItem";
@@ -14,7 +11,9 @@ export default function BirthdayList() {
   const [showDelete, setShowDelete] = useState(false);
   const [showAdd, setShowAdd] = useState(false);
   const [filter, setFilter] = useState(true);
-  // const hasTransitionedIn = useMountTransition(showAdd, 1000);
+
+
+  
 
   // grab the date 3 months from now and current date
   let laterDate = new Date(new Date().setMonth(new Date().getMonth() + 3));
@@ -35,7 +34,7 @@ export default function BirthdayList() {
 
   return (
     <main
-      className="max-w-xl h-fit rounded-lg p-2 flex flex-col justify-center gap-5 group shadow-smallDark"
+      className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 h-fit rounded-lg p-2 flex flex-col justify-center gap-5 group shadow-smallDark"
       id="birthdays"
     >
       <p className="text-light text-4xl font-extrabold">Birthday List</p>
@@ -69,16 +68,6 @@ export default function BirthdayList() {
           {filter ? "Show All" : "Next 3 months"}
         </button>
       </div>
-
-      {/* {(hasTransitionedIn || showAdd) && (
-        <div
-          className={`overflow-hidden ${hasTransitionedIn && ""} ${
-            showAdd && "h-fit overflow-auto"
-          }`}
-        >
-          <BirthdayCreate />
-        </div>
-      )} */}
 
       {showAdd && <BirthdayCreate />}
 
