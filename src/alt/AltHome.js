@@ -4,55 +4,61 @@ import {
   faCodepen,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
-import { useState, useEffect } from "react";
-import Values from "values.js";
+import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useContext } from "react";
+import { AppState } from "..";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AltHome() {
+  const {
+    theme,
+    highlight,
+    chosen,
+    primary,
+    secondary,
+    // handlePrimaryChange,
+    // handleHighlightChange,
+    // handleThemeSwitch,
+  } = useContext(AppState);
 
-  
+  // console.log(handleHighlightChange("#474747"));
+
+  // console.log(theme.value);
+  // console.log(theme.value)
   // theme
-  const [theme, setTheme] = useState(null);
+  // const [theme, setTheme] = useState(null);
 
-  // color inputs
-  const [highlight, setHighlight] = useState("#eaae39");
-  const [chosen, setChosen] = useState("#b43a3a");
-  // correlating theme colors
-  const [darkHigh, setDarkHigh] = useState(new Values("#eaae39").tint(30));
-  const [lightHigh, setLightHigh] = useState(new Values("#eaae39").shade(30));
-  const [dark, setDark] = useState(new Values("#b43a3a").tint(30));
-  const [light, setLight] = useState(new Values("#b43a3a").shade(30));
-  
+  // // color inputs
+  // const [highlight, setHighlight] = useState("#eaae39");
+  // const [chosen, setChosen] = useState("#b43a3a");
+  // // correlating theme colors
+  // const [darkHigh, setDarkHigh] = useState(new Values("#eaae39").tint(30));
+  // const [lightHigh, setLightHigh] = useState(new Values("#eaae39").shade(30));
+  // const [dark, setDark] = useState(new Values("#b43a3a").tint(30));
+  // const [light, setLight] = useState(new Values("#b43a3a").shade(30));
+
   // grabbing theme from browser
-  useEffect(() => {
-    if (window.matchMedia("(prefers-colorScheme: light)").matches) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (window.matchMedia("(prefers-colorScheme: light)").matches) {
+  //     handleThemeSwitch()
+  //   } else {
+  //     handleThemeSwitch()
+  //   }
+  // });
 
   // assigning theme
   useEffect(() => {
-    theme === "dark"
+    theme.value === "dark"
       ? document.documentElement.classList.add("dark")
       : document.documentElement.classList.remove("dark");
-  }, [theme]);
+  }, [theme.value]);
 
   // theme based dynamic color assignment
-  const primary = theme === "dark" ? `#${dark.hex}` : `#${light.hex}`;
-  const secondary = theme === "dark" ? `#${darkHigh.hex}` : `#${lightHigh.hex}`;
-
-
-
-
-
-
-
-
+  // const primary = theme === "dark" ? `#${dark.hex}` : `#${light.hex}`;
+  // const secondary = theme === "dark" ? `#${darkHigh.hex}` : `#${lightHigh.hex}`;
 
   // gsap animations
 
@@ -67,37 +73,23 @@ export default function AltHome() {
     {
       scale: 1.2,
     }
-    );
-    
-    useEffect(() => {
-      const shadowTheme =
-        theme === "dark"
-          ? "13px 13px 26px #2f2f2f, -13px -13px 26px #5f5f5f"
-          : "13px 13px 26px #a3a3a3, -13px -13px 26px #ffffff";
-      gsap.to("#GitHub", { duration: 1, boxShadow: shadowTheme });
-      gsap.to("#LinkedIn", { duration: 1, boxShadow: shadowTheme });
-      gsap.to("#Codepen", { duration: 1, boxShadow: shadowTheme });
-    }, [theme]);
+  );
 
-
-
-
-
-
-
-  
-  
-
-
-
-
-
+  useEffect(() => {
+    const shadowTheme =
+      theme === "dark"
+        ? "13px 13px 26px #2f2f2f, -13px -13px 26px #5f5f5f"
+        : "13px 13px 26px #a3a3a3, -13px -13px 26px #ffffff";
+    gsap.to("#GitHub", { duration: 1, boxShadow: shadowTheme });
+    gsap.to("#LinkedIn", { duration: 1, boxShadow: shadowTheme });
+    gsap.to("#Codepen", { duration: 1, boxShadow: shadowTheme });
+  }, [theme]);
 
   // handlers
 
-  const handleThemeSwitch = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
+  // const handleThemeSwitch = () => {
+  //   setTheme(theme === "dark" ? "light" : "dark");
+  // };
 
   const handleMouseEnter = () => {
     hoverTimeline.play();
@@ -107,36 +99,17 @@ export default function AltHome() {
     hoverTimeline.reverse();
   };
 
-  const handlePrimaryChange = (color) => {
-    setChosen(color);
-    setDark(new Values(chosen).tint(30));
-    setLight(new Values(chosen).shade(30));
-  };
+  // const handlePrimaryChange = (color) => {
+  //   setChosen(color);
+  //   setDark(new Values(chosen).tint(30));
+  //   setLight(new Values(chosen).shade(30));
+  // };
 
-  const handleHighlightChange = (color) => {
-    setHighlight(color);
-    setDarkHigh(new Values(highlight).tint(30));
-    setLightHigh(new Values(highlight).shade(30));
-  };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // const handleHighlightChange = (color) => {
+  //   setHighlight(color);
+  //   setDarkHigh(new Values(highlight).tint(30));
+  //   setLightHigh(new Values(highlight).shade(30));
+  // };
 
   // social 'database'
 
@@ -158,84 +131,27 @@ export default function AltHome() {
     },
   ];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   return (
     <main className="dark:bg-dark bg-light text-dark dark:text-light relative">
-      
       {/* menu */}
+
       
-      <div className="absolute top-0 right-0 flex flex-col gap-5 items-end">
-        <button onClick={handleThemeSwitch} className="w-10 h-10">
-          {theme === "dark" ? "light" : "dark"}
-        </button>
-        <div className="flex items-center gap-1">
-          <label htmlFor="highlight">highlight</label>
-          <input
-            type="color"
-            name="highlight"
-            className="h-10 w-10 border-transparent"
-            onChange={(e) => handleHighlightChange(e.target.value)}
-            value={highlight}
-          />
-        </div>
-        <div className="flex items-center gap-1">
-          <label htmlFor="main">main</label>
-          <input
-            type="color"
-            name="main"
-            className="h-10 w-10 border-transparent"
-            onChange={(e) => handlePrimaryChange(e.target.value)}
-            value={chosen}
-          />
-        </div>
-      </div>
-
-
-
-
-
-
-
 
       {/* Heading */}
 
       <div className="flex flex-col gap-6">
         <p className={`text-9xl font-bold dark:text-light text-dark`}>
           Hey! my name is
-          <span style={{ color: primary }}> Sean</span>
+          <span style={{ color: chosen.value }}> Sean</span>
         </p>
-        <p style={{ color: primary }} className="text-4xl ">
-          I make <span style={{ color: secondary }}>shopify</span> themes and
+        <p style={{ color: highlight.value }} className="text-4xl ">
+          I make <span style={{ color: highlight.value }}>shopify</span> themes and
           web apps
         </p>
         <p className="text-9xl">
-          Come say <span style={{ color: primary }}>Hi!</span>
+          Come say <span style={{ color: chosen.value }}>Hi!</span>
         </p>
       </div>
-
-
-
-
-
-
-
 
       {/* buttons */}
 

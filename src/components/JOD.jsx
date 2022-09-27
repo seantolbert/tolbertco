@@ -27,11 +27,11 @@ export default function JOD() {
     <>
       <div
         id="JOD"
-        className="px-4 pb-3 text-center md:text-left md:text-3xl w-full text-secondary font-bold text-xl"
+        className="px-4 pb-3 text-center md:text-left md:text-3xl w-full text-secondary font-bold text-xl bg-dark"
       >
         Jungles of Dorado's Latest Posts
       </div>
-      <div className=" flex flex-col items-center md:flex-row w-100 justify-evenly my-5">
+      <div className="bg-dark flex flex-col items-center md:flex-row w-100 justify-evenly">
         {posts &&
           posts.map((post) => (
             <a

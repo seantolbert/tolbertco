@@ -4,6 +4,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import Projects from "./pages/Projects";
+import { createContext } from "react";
+import AdminControl from "./context/AdminControl";
+
 import { setContext } from "@apollo/client/link/context";
 import {
   ApolloClient,
@@ -12,6 +15,9 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import Alt from "./pages/Alt";
+import Cursor from "./Cursor";
+
+export const AppState = createContext();
 
 const httpLink = createHttpLink({
   uri: "https://api.github.com/graphql",
@@ -36,11 +42,14 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ApolloProvider client={client}>
-        <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/alt" element={<Alt />} />
-        </Routes>
+        <AppState.Provider value={AdminControl}>
+          <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/alt" element={<Alt />} />
+          </Routes>
+          <Cursor />
+        </AppState.Provider>
       </ApolloProvider>
     </BrowserRouter>
   </React.StrictMode>
