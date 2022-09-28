@@ -15,8 +15,9 @@ module.exports = {
       },
       boxShadow: {
         smallDark: "-9px 9px 18px #2d2d2d, 9px -9px 18px #616161",
+        pressedSmallDark: "inset -9px 9px 18px #2d2d2d, inset 9px -9px 18px #616161",
         smallLight: " -9px 9px 18px #9c9c9c, 9px -9px 18px #ffffff;",
-        pressedSmallLight: " -9px 9px 18px #9c9c9c, 9px -9px 18px #ffffff;",
+        pressedSmallLight: "inset -9px 9px 18px #9c9c9c, inset 9px -9px 18px #ffffff;",
         medDark: "8px 8px 20px #353535, -8px -8px 16px #c1c1c1",
         pressedMedDark:
           "inset 3px 3px 5px #353535, inset -3px -3px 5px #c1c1c1",

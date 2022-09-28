@@ -1,34 +1,28 @@
-import { createContext, useReducer } from "react";
+import { signal } from "@preact/signals-react";
 
-export const ThemeContext = createContext();
+function AdminControl() {
+  const theme = signal(null);
+  const highlight = signal("#eaae39");
+  const chosen = signal("#b43a3a");
+  const xPosition = signal(null);
+  const yPosition = signal(null);
+  const outerX = signal(null);
+  const outerY = signal(null);
 
-const themeReducer = (state, action) => {
-  switch (action.type) {
-    case "CHANGE_COLOR":
-      return { ...state, color: action.payload };
-    case "CHANGE_MODE":
-      return { ...state, mode: action.payload };
-    default:
-      return state;
-  }
-};
-
-export function ThemeProvider({ children }) {
-  const [state, dispatch] = useReducer(themeReducer, {
-    color: "blue",
-    mode: "dark",
-  });
-
-  const changeColor = (color) => {
-    dispatch({ type: "CHANGE_COLOR", payload: color });
-  };
-  const changeMode = (mode) => {
-    dispatch({ type: "CHANGE_MODE", payload: mode });
+  const handleThemeSwitch = () => {
+    theme.value = theme.value === "dark" ? "light" : "dark";
   };
 
-  return (
-    <ThemeContext.Provider value={{ ...state, changeColor, changeMode }}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return {
+    theme,
+    highlight,
+    chosen,
+    xPosition,
+    yPosition,
+    outerX,
+    outerY,
+    handleThemeSwitch,
+  };
 }
+
+export default AdminControl();

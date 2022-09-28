@@ -29,10 +29,10 @@ export default function AltHome() {
     gsap.to("#Codepen", { duration: 1, boxShadow: shadowTheme });
   }, [theme.value]);
 
-  // social 'database'
+
 
   return (
-    <main className="dark:bg-dark bg-light text-dark dark:text-light relative">
+    <main className="text-dark dark:text-light relative">
       <div className="flex flex-col gap-6">
         <p className={`text-9xl font-bold dark:text-light text-dark`}>
           Hey! my name is

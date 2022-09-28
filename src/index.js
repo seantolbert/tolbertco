@@ -5,7 +5,7 @@ import "./index.css";
 import App from "./App";
 import Projects from "./pages/Projects";
 import { createContext } from "react";
-import AdminControl from "./context/AdminControl";
+import ThemeContext from "./context/ThemeContext";
 
 import { setContext } from "@apollo/client/link/context";
 import {
@@ -15,7 +15,6 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import Alt from "./pages/Alt";
-import Cursor from "./Cursor";
 
 export const AppState = createContext();
 
@@ -42,13 +41,13 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ApolloProvider client={client}>
-        <AppState.Provider value={AdminControl}>
+        <AppState.Provider value={ThemeContext}>
           <Routes>
             <Route path="/" element={<App />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/alt" element={<Alt />} />
           </Routes>
-          <Cursor />
+          
         </AppState.Provider>
       </ApolloProvider>
     </BrowserRouter>
