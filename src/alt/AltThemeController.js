@@ -1,35 +1,8 @@
 import { useContext } from "react";
 import { AppState } from "..";
-import { batch, effect } from "@preact/signals-react";
-import Values from "values.js";
 
 export default function AltThemeController() {
-  const {
-    theme,
-    chosen,
-    highlight,
-    // darkPrime,
-    // darkHigh,
-    // lightHigh,
-    // lightPrime,
-    handleThemeSwitch,
-    handlePrimaryChange,
-    handleHighlightChange,
-  } = useContext(AppState);
-
-  // const handlePrimaryChange = (color) => {
-  //   batch(() => {
-  //     chosen.value = color;
-  //     darkPrime.value = new Values(chosen.value).tint(30);
-  //     lightPrime.value = new Values(chosen.value).shade(30);
-  //   });
-  // };
-
-  // const handleHighlightChange = (color) => {
-  //   highlight.value = color;
-  //   darkHigh.value = new Values(highlight.value).tint(30);
-  //   lightHigh.value = new Values(highlight.value).shade(30);
-  // };
+  const { theme, chosen, highlight, handleThemeSwitch } = useContext(AppState);
 
   return (
     <div className="fixed right-0 flex flex-col gap-5 p-5 items-end z-[10]">
@@ -39,20 +12,17 @@ export default function AltThemeController() {
       >
         {theme.value === "dark" ? "light" : "dark"}
       </button>
-      {/* <form
-        onSubmit={handleHighlightChange}
-        className="flex items-center gap-1"
-      >
+      <form className="flex items-center gap-1">
         <label htmlFor="highlight">highlight</label>
         <input
           type="color"
           name="highlight"
           className="h-10 w-10 border-transparent"
           onChange={(e) => (highlight.value = e.target.value)}
-          value={highlight}
+          value={highlight.value}
         />
-      </form> */}
-      <form onSubmit={handlePrimaryChange} className="flex items-center gap-1" >
+      </form>
+      <form className="flex items-center gap-1">
         <label htmlFor="main">main</label>
         <div>
           <input

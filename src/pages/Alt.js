@@ -8,14 +8,14 @@ export default function Alt() {
 
   useEffect(() => {
     if (window.matchMedia("(prefers-colorScheme: light)").matches) {
-      theme.value = "dark";
-    } else {
       theme.value = "light";
+    } else {
+      theme.value = "dark";
     }
   });
 
   return (
-    <div className="dark:bg-dark bg-light h-screen p-2 cursor-[url()]">
+    <div className="dark:bg-dark bg-light h-screen p-2">
       <AltThemeController />
       <AltHome />
     </div>
