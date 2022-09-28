@@ -6,7 +6,7 @@ import { batch } from "@preact/signals-react";
 import Cursor from "../Cursor";
 
 export default function Alt() {
-  const { theme, xPosition, yPosition, outerX, outerY } = useContext(AppState);
+  const { theme, xPosition, yPosition, showCursor } = useContext(AppState);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-colorScheme: 'light')").matches) {
@@ -16,19 +16,27 @@ export default function Alt() {
     }
   });
 
+  const handleMouseEnter = () => {
+    showCursor.value = true;
+  };
+
+  const handleMouseLeave = () => {
+    showCursor.value = false;
+  };
+
   const handleMouseMove = (e) => {
     batch(() => {
       xPosition.value = e.pageX;
       yPosition.value = e.pageY;
-      outerX.value = e.pageX + 4;
-      outerY.value = e.pageY + 4;
     });
   };
 
   return (
     <div
-      className="dark:bg-dark bg-light h-screen cursor-none"
+      className="dark:bg-dark bg-light h-full cursor-none"
       onMouseMove={(e) => handleMouseMove(e)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <Cursor />
       {/* <AltBarAnimation /> */}

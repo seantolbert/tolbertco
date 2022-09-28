@@ -1,3 +1,7 @@
+import { useEffect, useContext } from "react";
+import { AppState } from "..";
+import gsap from "gsap";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -6,11 +10,24 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function AltSocial() {
+  const { theme } = useContext(AppState);
+
+  // button rising animation
+  useEffect(() => {
+    const shadowTheme =
+      theme.value === "dark"
+        ? "13px 13px 26px #2f2f2f, -13px -13px 26px #5f5f5f"
+        : "13px 13px 26px #a3a3a3, -13px -13px 26px #ffffff";
+    gsap.to("#Github", { duration: 1, boxShadow: shadowTheme });
+    gsap.to("#Linkedin", { duration: 3, boxShadow: shadowTheme });
+    gsap.to("#Codepen", { duration: 2, boxShadow: shadowTheme });
+  }, [theme.value]);
+
   return (
-    <div id="buttons" className="flex gap-24 my-10 w-3/4 ">
+    <div id="buttons" className="flex gap-24 mt-10 w-3/4 ">
       <a
         id="Github"
-        className="text-6xl p-4 rounded-full relative flex justify-center items-center"
+        className="text-6xl w-24 h-24 rounded-full relative flex justify-center items-center"
         rel="noreferrer"
         target="_blank"
         href="https://github.com/seantolbert"
@@ -19,7 +36,7 @@ export default function AltSocial() {
       </a>
       <a
         id="Codepen"
-        className="text-6xl p-4 rounded-full relative flex justify-center items-center"
+        className="text-6xl w-24 h-24 rounded-full relative flex justify-center items-center"
         rel="noreferrer"
         target="_blank"
         href="https://github.com/seantolbert"
@@ -28,7 +45,7 @@ export default function AltSocial() {
       </a>
       <a
         id="Linkedin"
-        className="text-6xl p-4 rounded-full relative flex justify-center items-center"
+        className="text-6xl w-24 h-24 rounded-full relative flex justify-center items-center"
         rel="noreferrer"
         target="_blank"
         href="https://github.com/seantolbert"
