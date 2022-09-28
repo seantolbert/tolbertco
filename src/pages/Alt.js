@@ -4,6 +4,9 @@ import { useEffect, useContext } from "react";
 import { AppState } from "..";
 import { batch } from "@preact/signals-react";
 import Cursor from "../Cursor";
+// import AltBarAnimation from '../alt/AltBarAnimation'
+// import AltBarAnimation2 from '../alt/AltBarAnimation2'
+import AltPageSwitch from "../alt/AltPageSwitch";
 
 export default function Alt() {
   const { theme, xPosition, yPosition, showCursor } = useContext(AppState);
@@ -42,7 +45,10 @@ export default function Alt() {
       {/* <AltBarAnimation /> */}
       {/* <AltBarAnimation2 /> */}
       <AltThemeController />
-      <AltHome />
+      <div className="m-7">
+        <AltHome />
+        <AltPageSwitch />
+      </div>
     </div>
   );
 }

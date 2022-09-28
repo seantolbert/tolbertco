@@ -7,7 +7,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AltBarAnimation() {
-  const { chosen, highlight, xPosition, yPosition, theme } =
+  const { chosen, xPosition , theme } =
     useContext(AppState);
   const lightOne =
     theme.value === "dark"
@@ -112,8 +112,8 @@ export default function AltBarAnimation() {
 
   return (
     <main className="flex w-screen gap-10">
-      <div className="absolute">
-        <div className="relative">
+      <div className="absolute ">
+        <div className="relative ">
           <div
             id="lightEight"
             style={{ background: `#${lightEight.hex}` }}
@@ -122,7 +122,7 @@ export default function AltBarAnimation() {
           <div
             id="primary-bar"
             style={{ background: chosen.value }}
-            className="h-[6000px] w-20 absolute"
+            className="h-[6000px] w-20 h-20 rounded-full absolute"
           ></div>
           <div
             id="lightOne"

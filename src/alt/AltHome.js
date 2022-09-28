@@ -18,7 +18,7 @@ export default function AltHome() {
 
   return (
     <main className="text-dark dark:text-light">
-      <div className="flex flex-col gap-6 m-7">
+      <div className="flex flex-col gap-6 items-start">
         <p className={`text-9xl font-bold dark:text-light text-dark`}>
           Hey! my name is
           <span style={{ color: chosen.value }}> Sean</span>

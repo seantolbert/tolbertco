@@ -17,7 +17,7 @@ export default function AltThemeController() {
 
   return (
     <div
-      className={`fixed top-0 right-0 flex flex-col items-center gap-5 p-5 items-end z-[10] rounded-xl m-1 ${
+      className={`fixed xs:bottom-0 bottom-0 sm:bottom-0 md:top-0 right-0 flex sm:flex-col-reverse md:flex-col items-center gap-5 p-5 z-[10] rounded-xl m-1 ${
         show.value && "dark:shadow-pressedSmallDark shadow-pressedSmallLight"
       }`}
     >
