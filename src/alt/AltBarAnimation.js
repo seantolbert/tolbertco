@@ -52,49 +52,49 @@ export default function AltBarAnimation() {
     ease: "none",
   });
   gsap.to("#lightOne", {
-    duration: 1,
+    duration: 0.6,
     x: format,
     stagger: 0.15,
     ease: "none",
   });
   gsap.to("#lightTwo", {
-    duration: 1.5,
+    duration: 0.7,
     x: format,
     stagger: 0.15,
     ease: "none",
   });
   gsap.to("#lightThree", {
-    duration: 2,
+    duration: 0.8,
     x: format,
     stagger: 0.15,
     ease: "none",
   });
   gsap.to("#lightFour", {
-    duration: 2.5,
+    duration: 0.9,
     x: format,
     stagger: 0.15,
     ease: "none",
   });
   gsap.to("#lightFive", {
-    duration: 3,
+    duration: 1,
     x: format,
     stagger: 0.15,
     ease: "none",
   });
   gsap.to("#lightSix", {
-    duration: 3.5,
+    duration: 1.1,
     x: format,
     stagger: 0.15,
     ease: "none",
   });
   gsap.to("#lightSeven", {
-    duration: 4,
+    duration: 1.2,
     x: format,
     stagger: 0.15,
     ease: "none",
   });
   gsap.to("#lightEight", {
-    duration: 4.5,
+    duration: 1.4,
     x: format,
     stagger: 0.15,
     ease: "none",
@@ -117,12 +117,12 @@ export default function AltBarAnimation() {
           <div
             id="lightEight"
             style={{ background: `#${lightEight.hex}` }}
-            className="h-[6000px] w-20 absolute "
+            className="h-[6000px] w-20 absolute z-[30]"
           ></div>
           <div
             id="primary-bar"
             style={{ background: chosen.value }}
-            className="h-[6000px] w-20 h-20 rounded-full absolute"
+            className="h-[6000px] w-20 absolute"
           ></div>
           <div
             id="lightOne"

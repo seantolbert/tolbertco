@@ -4,7 +4,7 @@ import { useEffect, useContext } from "react";
 import { AppState } from "..";
 import { batch } from "@preact/signals-react";
 import Cursor from "../Cursor";
-// import AltBarAnimation from '../alt/AltBarAnimation'
+// import AltBarAnimation from "../alt/AltBarAnimation";
 // import AltBarAnimation2 from '../alt/AltBarAnimation2'
 import AltPageSwitch from "../alt/AltPageSwitch";
 
@@ -36,16 +36,16 @@ export default function Alt() {
 
   return (
     <div
-      className="dark:bg-dark bg-light h-full cursor-none"
+      className="dark:bg-dark bg-light cursor-none"
       onMouseMove={(e) => handleMouseMove(e)}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <Cursor />
-      {/* <AltBarAnimation /> */}
       {/* <AltBarAnimation2 /> */}
+        {/* <AltBarAnimation /> */}
       <AltThemeController />
-      <div className="m-7">
+      <div className="m-0 md:m-2 lg:m-7">
         <AltHome />
         <AltPageSwitch />
       </div>
