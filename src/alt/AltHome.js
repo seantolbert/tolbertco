@@ -1,11 +1,8 @@
 import { useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useContext } from "react";
 import { AppState } from "..";
+import AltPageSwitch from "./AltPageSwitch";
 import AltSocial from "./AltSocial";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function AltHome() {
   const { theme, highlight, chosen } = useContext(AppState);
@@ -31,6 +28,7 @@ export default function AltHome() {
           Come say <span style={{ color: chosen.value }}>Hi!</span>
         </p>
         <AltSocial />
+        <AltPageSwitch />
       </div>
     </main>
   );

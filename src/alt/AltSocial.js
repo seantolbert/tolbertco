@@ -27,7 +27,7 @@ export default function AltSocial() {
     <div id="buttons" className="flex gap-24 mt-10 w-3/4 ">
       <a
         id="Github"
-        className="text-6xl w-24 h-24 rounded-full relative flex justify-center items-center"
+        className="bg-light dark:bg-dark text-6xl w-24 h-24 rounded-full relative flex justify-center items-center"
         rel="noreferrer"
         target="_blank"
         href="https://github.com/seantolbert"
@@ -36,7 +36,7 @@ export default function AltSocial() {
       </a>
       <a
         id="Codepen"
-        className="text-6xl w-24 h-24 rounded-full relative flex justify-center items-center"
+        className="bg-light dark:bg-dark text-6xl w-24 h-24 rounded-full relative flex justify-center items-center"
         rel="noreferrer"
         target="_blank"
         href="https://github.com/seantolbert"
@@ -45,7 +45,7 @@ export default function AltSocial() {
       </a>
       <a
         id="Linkedin"
-        className="text-6xl w-24 h-24 rounded-full relative flex justify-center items-center"
+        className="bg-light dark:bg-dark text-6xl w-24 h-24 rounded-full relative flex justify-center items-center"
         rel="noreferrer"
         target="_blank"
         href="https://github.com/seantolbert"

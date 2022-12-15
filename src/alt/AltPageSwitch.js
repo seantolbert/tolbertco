@@ -1,33 +1,25 @@
 import { useContext } from "react";
 import { AppState } from "..";
-import {useSignal} from '@preact/signals-react'
 
 export default function AltPageSwitch() {
-  // const { selected } = useContext(AppState);
+  const { selected } = useContext(AppState);
 
-  let selected = useSignal('projects')
-
-
-
-  const pages = [
-    { name: "Projects", value: "projects" },
-    { name: "Resources", value: "resources" },
-    { name: "About", value: "about" },
-    { name: "Contact", value: "contact" },
-  ];
-  // console.log(selected.value);
+  const pages = ["Portfolio", "Experience", "Resources", "About", "Contact"];
 
   return (
-    <div className="mt-10 w-full flex justify-start md:justify-center gap-24">
+    <div className="mt-10 w-full text-2xl flex justify-start md:justify-center gap-24 z-[1]">
       {pages.map((page) => (
         <button
-          key={page.name}
-          onClick={() => console.log(page.name)}
+          onClick={() => {
+            selected.value = page;
+            // console.log(selected.value);
+          }}
+          key={page}
           className={`dark:text-light text-dark font-bold ${
-            selected.value === page.value && "border-b-4"
+            selected.value === page && "border-b-4"
           }`}
         >
-          {page.name}
+          {page}
         </button>
       ))}
     </div>

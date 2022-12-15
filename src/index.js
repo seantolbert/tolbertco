@@ -2,8 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
-import App from "./App";
-import Projects from "./pages/Projects";
 import { createContext } from "react";
 import ThemeContext from "./context/ThemeContext";
 
@@ -43,11 +41,10 @@ root.render(
       <ApolloProvider client={client}>
         <AppState.Provider value={ThemeContext}>
           <Routes>
-            <Route path="/" element={<App />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/alt" element={<Alt />} />
+            <Route path="/" element={<Alt />} />
+            {/* <Route path="/" element={<App />} /> */}
+            {/* <Route path="/projects" element={<Projects />} /> */}
           </Routes>
-          
         </AppState.Provider>
       </ApolloProvider>
     </BrowserRouter>
