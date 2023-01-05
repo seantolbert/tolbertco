@@ -14,7 +14,7 @@ const Background = () => {
         animate={{ opacity: 1, x, y }}
         transition={{
           type: "spring",
-          damping: 3,
+          damping: 8,
           stiffness: 50,
           restDelta: 0.001,
         }}
