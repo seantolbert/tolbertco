@@ -2,80 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
-:root {
-  --primary: #4dcfff;
-  --secondary: #99e4ff;
-  --highlight: #ffff00;
-  --primary-color: rgb(145, 190, 226);
-  --bg-color: rgb(123, 123, 123);
-  --heading-font: "Bebas Neue", cursive;
-}
+body::-webkit-scrollbar {
+    display: none;
+  }
 
-html {
-  margin: 0;
-  padding: 0;
-  background: #e3e3e3;
-  /* transition: background 0.4s ease; */
-}
-
-html.dark {
-  background: #474747;
-}
-
-body {
-  font-size: 1.1rem;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-*:focus {
-  outline: none;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-textarea {
-  resize: none;
-}
-
-textarea::-webkit-scrollbar {
-  background: transparent;
-}
-
-#mainInput::-webkit-color-swatch {
-  border-radius: 20px;
-  border: none;
-}
-#mainInput::-moz-color-swatch {
-  border-radius: 20px;
-  border: none;
-}
-#secondaryInput::-webkit-color-swatch {
-  border-radius: 20px;
-  border: none;
-}
-#secondaryInput::-moz-color-swatch {
-  border-radius: 20px;
-  border: none;
-}
-
-
-
-.clay {
-  backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 255, 1);
-  border-radius: 26px;
-  box-shadow: 35px 35px 68px 0px rgba(71, 71, 71, 0.5),
-    inset -8px -8px 16px 0px rgba(71, 71, 71, 0.6),
-    inset 0px 11px 28px 0px rgb(255, 255, 255);
-}
-
-.embed-nav.group {
-  background: transparent;
-}
+.App {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }

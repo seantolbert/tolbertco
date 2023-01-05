@@ -2,13 +2,13 @@ import {
   Home,
   MobileDivider,
   MobileMenu,
-  GitContributions,
+  // GitContributions,
   StatsBoard,
   ProjectList,
   Menu,
   Contact,
   FlexGrid,
-  JOD,
+  // JOD,
   Footer,
 } from "./components/index";
 
@@ -18,23 +18,23 @@ import { useWindowSize } from "@react-hook/window-size/throttled";
 
 // styles
 import "./App.css";
+import Background from "./components/Background";
+import About from "./components/About";
 // import WeatherPanel from "./components/WeatherPanel";
 
 function App() {
   const [width] = useWindowSize({ fps: 30 });
 
   return (
-    <div className="App h-screen w-screen bg-dark">
+    <div className="App  ">
       {width >= 1200 ? <Menu /> : <MobileMenu />}
-      <FlexGrid />
+      {/* {width >= 1200 && <Background />} */}
+      <Background />
       <Home />
-      {width >= 1200 ? <FlexGrid /> : <MobileDivider />}
       <StatsBoard />
-      {width >= 1200 && <GitContributions />}
       <ProjectList />
+      <About />
       {width >= 1200 ? <FlexGrid /> : <MobileDivider />}
-      {/* <WeatherPanel /> */}
-      <JOD />
       <Contact />
       <Footer />
     </div>

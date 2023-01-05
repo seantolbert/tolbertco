@@ -53,7 +53,7 @@ export default function Card({ node }) {
 
   return (
     <div className="mx-4 md:mx-0 h-50 md:h-64 snap-center rounded-lg">
-      <div className="group p-7 h-full flex flex-col shadow-smallDark justify-between transition w-52 md:w-full rounded-lg">
+      <div className="group p-7 h-full flex flex-col border-y border-y-gray-600 backdrop-blur-3xl justify-between transition w-52 md:w-full rounded-lg">
         <div>
           <div className="font-bold text-xl">{handleName(node.name)}</div>
           <div className="font-light text-sm">

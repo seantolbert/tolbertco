@@ -19,6 +19,7 @@
     "dotenv": "^16.0.1",
     "firebase": "^9.10.0",
     "firebase-tools": "^11.0.1",
+    "framer-motion": "^8.1.7",
     "graphql": "^16.5.0",
     "gsap": "^3.11.1",
     "path-browserify": "^1.0.1",
@@ -28,6 +29,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "sass": "^1.52.1",
+    "tailwind-scrollbar-hide": "^1.1.7",
     "tailwindcss-animation-delay": "^1.0.7",
     "values.js": "^2.1.1",
     "web-vitals": "^2.1.4"
@@ -57,8 +59,8 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.7",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.0.24"
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.20",
+    "tailwindcss": "^3.2.4"
   }
 }

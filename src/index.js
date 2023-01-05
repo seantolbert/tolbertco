@@ -13,6 +13,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import Alt from "./pages/Alt";
+import App from "../src/App";
 
 export const AppState = createContext();
 
@@ -41,8 +42,8 @@ root.render(
       <ApolloProvider client={client}>
         <AppState.Provider value={ThemeContext}>
           <Routes>
-            <Route path="/" element={<Alt />} />
-            {/* <Route path="/" element={<App />} /> */}
+            {/* <Route path="/" element={<Alt />} /> */}
+            <Route path="/" element={<App />} />
             {/* <Route path="/projects" element={<Projects />} /> */}
           </Routes>
         </AppState.Provider>
