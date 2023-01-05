@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="App  ">
-      {width >= 1200 ? <Menu /> : <MobileMenu />}
+      {/* {width >= 1200 ? <Menu /> : <MobileMenu />} */}
       {/* {width >= 1200 && <Background />} */}
       <Background />
       <Home />

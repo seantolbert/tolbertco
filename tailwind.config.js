@@ -23,6 +23,8 @@ module.exports = {
         medDark: "8px 8px 20px #353535, -8px -8px 16px #c1c1c1",
         pressedMedDark:
           "inset 3px 3px 5px #353535, inset -3px -3px 5px #c1c1c1",
+
+        shadow: "7px 7px 13px #161d25,-7px -7px 13px #506785",
       },
     },
     plugins: [require("tailwind-scrollbar-hide")],
