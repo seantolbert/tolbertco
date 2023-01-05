@@ -15,6 +15,7 @@ import {
   DockerLogo,
   TailwindLogo,
   MUILogo,
+  Expo
 } from "../assets/AssetIndex";
 
 export default function Card({ node }) {
@@ -42,6 +43,8 @@ export default function Card({ node }) {
         return TailwindLogo;
       case "material-ui":
         return MUILogo;
+      case "expo":
+        return Expo;
       default:
         return name;
     }
@@ -58,7 +61,8 @@ export default function Card({ node }) {
           <div className="font-bold text-xl">{handleName(node.name)}</div>
           <div className="font-light text-sm">
             {/* {handleDate(node.createdAt)} */}
-            {formatDistanceToNow(new Date(node.createdAt), { addSuffix: true })}
+
+            created {formatDistanceToNow(new Date(node.createdAt), { addSuffix: true })}
           </div>
         </div>
         <div className="group-hover:text-secondary text-sm md:text-lg transition duration-700">

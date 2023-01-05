@@ -18,6 +18,7 @@ import CRALogo from "../assets/create-react-app.svg";
 import ViteLogo from "../assets/vitejs.svg";
 import GitLogo from "../assets/git-icon.svg";
 import MUILogo from "../assets/material-ui.svg";
+import Expo from "../assets/expo-icon.svg"
 
 const techIKnow = [
   { name: "Bulma", value: "bulma", link: "https://bulma.io/", icon: BulmaLogo },
@@ -140,6 +141,7 @@ export {
   TailwindLogo,
   CSS3Logo,
   HTMLLogo,
+  Expo,
   NodeLogo,
   PythonLogo,
   JSLogo,
@@ -147,5 +149,5 @@ export {
   ViteLogo,
   GitLogo,
   MUILogo,
-  techIKnow
+  techIKnow,
 };
