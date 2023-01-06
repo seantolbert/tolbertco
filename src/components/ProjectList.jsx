@@ -8,7 +8,7 @@ export default function ProjectList() {
 
   return (
     <div id="pinned" className="flex justify-center items-center w-full py-10">
-      <div className="w-4/5">
+      <div className="md:w-4/5">
         <div className="text-center md:text-left md:text-3xl w-full text-secondary font-bold text-xl">
           Portfolio
         </div>
@@ -16,7 +16,7 @@ export default function ProjectList() {
         {isPending && <div>Loading...</div>}
 
         {width <= 600 ? (
-          <div className="text-white py-4 gap-5 flex snap-x snap-mandatory overflow-auto">
+          <div className="text-white py-4 flex snap-x snap-mandatory overflow-hidden">
             {projects &&
               projects.user.pinnedItems.edges.map(({ node }) => (
                 <Card node={node} key={node.id} />

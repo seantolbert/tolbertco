@@ -18,7 +18,7 @@ export default function StatsBoard() {
       {/* individually made tags */}
       {/*  */}
       <div className="w-4/5 flex justify-between">
-        <div className="flex items-start flex-wrap w-1/2 gap-8 content-start">
+        <div className="flex items-start flex-wrap md:w-1/2 gap-8 content-start">
           <div className="flex gap-2 font-bold text-secondary rounded-xl p-3 backdrop-blur-3xl border-y border-y-gray-600">
             Looking to collaborate with other content creators
           </div>
@@ -35,12 +35,23 @@ export default function StatsBoard() {
           </div>
           <div className="flex gap-2 font-bold text-secondary rounded-xl p-3 backdrop-blur-3xl border-y border-y-gray-600">
             <span className="text-secondary">
-              Currently working on:{" "}
+              Current mobile project:{" "}
               <a
                 href="https://github.com/seantolbert/daily"
                 className="text-highlight font-bold"
               >
                 Daily
+              </a>
+            </span>
+          </div>
+          <div className="flex gap-2 font-bold text-secondary rounded-xl p-3 backdrop-blur-3xl border-y border-y-gray-600">
+            <span className="text-secondary">
+              Current web project:{" "}
+              <a
+                href="https://github.com/seantolbert/quotateV6"
+                className="text-highlight font-bold"
+              >
+                Quotate
               </a>
             </span>
           </div>
@@ -72,24 +83,25 @@ export default function StatsBoard() {
         {/*  */}
         {/* mapped tech tags */}
         {/*  */}
-
-        <div className="w-1/2 flex flex-wrap gap-8 content-start justify-end">
-          {techIKnow.map((tech, i) => (
-            <div
-              key={i}
-              className="flex gap-2 font-bold text-secondary rounded-xl p-3 backdrop-blur-3xl border-y border-y-gray-600"
-            >
-              {width >= 600 && (
-                <img
-                  src={tech.icon}
-                  alt={tech.name}
-                  className="w-full max-h-6"
-                />
-              )}
-              <span>{tech.name}</span>
-            </div>
-          ))}
-        </div>
+        {window.innerWidth > 640 && (
+          <div className="w-1/2 flex flex-wrap gap-8 content-start justify-end">
+            {techIKnow.map((tech, i) => (
+              <div
+                key={i}
+                className="flex gap-2 font-bold text-secondary rounded-xl p-3 backdrop-blur-3xl border-y border-y-gray-600"
+              >
+                {width >= 600 && (
+                  <img
+                    src={tech.icon}
+                    alt={tech.name}
+                    className="w-full max-h-6"
+                  />
+                )}
+                <span>{tech.name}</span>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ import {
   InMemoryCache,
   createHttpLink,
 } from "@apollo/client";
-import Alt from "./pages/Alt";
+// import Alt from "./pages/Alt";
 import App from "../src/App";
 
 export const AppState = createContext();

@@ -4,7 +4,7 @@ const About = () => {
       id="About"
       className="w-full text-light  px-10 h-screen flex items-center justify-center"
     >
-      <div className="w-3/5  md:text-xl flex flex-col gap-6 rounded-2xl border-y border-y-gray-600  p-5 bg-gradient-to-tr from-slate-700 backdrop-blur-xl overflow-hidden">
+      <div className="md:w-3/5  md:text-xl flex flex-col gap-6 rounded-2xl border-y border-y-gray-600  p-5 bg-gradient-to-tr from-slate-700 backdrop-blur-xl overflow-hidden">
         <p>
           I am a full stack engineer with an inclination towards front end and
           mobile development with React and React Native.

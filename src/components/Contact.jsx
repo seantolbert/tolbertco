@@ -36,12 +36,12 @@ export default function Contact() {
   return (
     <form
       id="contact"
-      className="flex flex-col items-center w-full pb-20 "
+      className="flex flex-col items-center w-full pb-20"
       onSubmit={handleSubmit}
     >
-      <div className="md:w-1/2 w-full backdrop-blur-[100px] flex rounded-xl p-5 flex-col group items-center gap-5">
-        <p className="text-4xl text-light">Contact</p>
-        <p className="text-xl text-secondary">
+      <div className="md:w-1/2 w-full backdrop-blur-[100px] flex rounded-xl p-5 flex-col group items-center gap-5 bg-secondary">
+        <p className="text-4xl text-dark">Contact</p>
+        <p className="text-xl text-dark">
           Do you want to work together?
         </p>
         {success && (
@@ -74,7 +74,7 @@ export default function Contact() {
         />
         <button
           type="submit"
-          className="p-3 m-4 rounded-md text-primary text-xl transition-shadow duration-1000 hover:shadow-shadow focus:shadow-medDark active:shadow-pressedMedDark"
+          className="p-3 m-4 rounded-md text-xl transition-shadow duration-1000 hover:shadow-shadow focus:shadow-medDark active:shadow-pressedMedDark"
         >
           send me a message
         </button>
