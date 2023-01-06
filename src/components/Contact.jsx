@@ -35,7 +35,7 @@ export default function Contact() {
 
   return (
     <form
-      id="contact"
+      id="Contact"
       className="flex flex-col items-center w-full pb-20"
       onSubmit={handleSubmit}
     >

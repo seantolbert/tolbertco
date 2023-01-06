@@ -3,73 +3,73 @@ import { formatDistanceToNow } from "date-fns";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import {
-  ReactLogo,
-  DjangoLogo,
-  PostgresqlLogo,
-  WagtailLogo,
-  BulmaLogo,
-  SassLogo,
-  FirebaseLogo,
-  GraphqlLogo,
-  DockerLogo,
-  TailwindLogo,
-  MUILogo,
-  Expo
-} from "../assets/AssetIndex";
+// import {
+//   ReactLogo,
+//   DjangoLogo,
+//   PostgresqlLogo,
+//   WagtailLogo,
+//   BulmaLogo,
+//   SassLogo,
+//   FirebaseLogo,
+//   GraphqlLogo,
+//   DockerLogo,
+//   TailwindLogo,
+//   MUILogo,
+//   Expo
+// } from "../assets/AssetIndex";
 
 export default function Card({ node }) {
-  const iconConverter = (name) => {
-    switch (name) {
-      case "react":
-        return ReactLogo;
-      case "django":
-        return DjangoLogo;
-      case "postgresql":
-        return PostgresqlLogo;
-      case "wagtail":
-        return WagtailLogo;
-      case "bulma":
-        return BulmaLogo;
-      case "scss":
-        return SassLogo;
-      case "firebase":
-        return FirebaseLogo;
-      case "graphql":
-        return GraphqlLogo;
-      case "docker":
-        return DockerLogo;
-      case "tailwind":
-        return TailwindLogo;
-      case "material-ui":
-        return MUILogo;
-      case "expo":
-        return Expo;
-      default:
-        return name;
-    }
-  };
+  // const iconConverter = (name) => {
+  //   switch (name) {
+  //     case "react":
+  //       return ReactLogo;
+  //     case "django":
+  //       return DjangoLogo;
+  //     case "postgresql":
+  //       return PostgresqlLogo;
+  //     case "wagtail":
+  //       return WagtailLogo;
+  //     case "bulma":
+  //       return BulmaLogo;
+  //     case "scss":
+  //       return SassLogo;
+  //     case "firebase":
+  //       return FirebaseLogo;
+  //     case "graphql":
+  //       return GraphqlLogo;
+  //     case "docker":
+  //       return DockerLogo;
+  //     case "tailwind":
+  //       return TailwindLogo;
+  //     case "material-ui":
+  //       return MUILogo;
+  //     case "expo":
+  //       return Expo;
+  //     default:
+  //       return name;
+  //   }
+  // };
 
   const handleName = (n) => {
     return n.replaceAll("-", " ").toUpperCase();
   };
 
   return (
-    <div className="h-50 md:h-64 snap-center shrink-0 rounded-lg w-screen flex justify-center">
-      <div className="group p-7 h-full flex flex-col border-y border-y-gray-600 backdrop-blur-3xl transition w-4/5  rounded-lg">
+    <div className="snap-center shrink-0 md:shrink-1 rounded-lg w-screen md:w-1/4 flex justify-center">
+      <div className="group p-7 h-full flex flex-col border-y border-y-gray-600 backdrop-blur-3xl transition w-4/5 md:w-full rounded-lg">
         <div>
           <div className="font-bold text-xl">{handleName(node.name)}</div>
           <div className="font-light text-sm">
             {/* {handleDate(node.createdAt)} */}
-
-            created {formatDistanceToNow(new Date(node.createdAt), { addSuffix: true })}
+            created{" "}
+            {formatDistanceToNow(new Date(node.createdAt), { addSuffix: true })}
           </div>
         </div>
         <div className="group-hover:text-secondary text-sm md:text-lg transition duration-700">
           {node.description}
         </div>
         <div className="flex justify-between pt-1">
-          <div className="gap-2 grid grid-rows-2 grid-cols-3 md:flex md:flex-row">
+          {/* <div className="gap-2 grid grid-rows-2 grid-cols-3 md:flex md:flex-row">
             {node.repositoryTopics.edges.map(({ node }) => (
               <div
                 className="pt-4 md:pt-0 w-6 h-6 md:w-8 md:h-8 flex justify-center items-center"
@@ -82,7 +82,7 @@ export default function Card({ node }) {
                 />
               </div>
             ))}
-          </div>
+          </div> */}
           <div className="flex gap-2 mt-2 md:mt-0 flex-col md:flex-row">
             {node.homepageUrl && (
               <a
