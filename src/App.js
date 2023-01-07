@@ -1,11 +1,11 @@
 import {
   Home,
-  MobileDivider,
   StatsBoard,
   ProjectList,
   Contact,
-  FlexGrid,
   Footer,
+  // MobileDivider,
+  // FlexGrid,
   // MobileMenu,
   // Menu,
 } from "./components/index";

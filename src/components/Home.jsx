@@ -20,14 +20,18 @@ export default function Home() {
             I am a Full-Stack Developer for Hire.
           </p>
           <a
-            href="#contact"
+            href="#Contact"
             className="text-secondary w-full md:w-fit gap-5 rounded-lg flex items-center"
           >
             <p className="text-secondary text-5xl">come say hi!</p>
             <motion.div
               className="text-2xl"
               animate={{ y: [0, 15, 0] }}
-              transition={{ duration: 1.5, ease: "easeInOut", repeat: Infinity }}
+              transition={{
+                duration: 1.5,
+                ease: "easeInOut",
+                repeat: Infinity,
+              }}
             >
               <FontAwesomeIcon icon={faLongArrowDown} />
             </motion.div>
