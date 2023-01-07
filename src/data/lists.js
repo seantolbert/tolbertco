@@ -5,6 +5,12 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import {
+  faContactCard,
+  faJedi,
+  faPortrait,
+} from "@fortawesome/free-solid-svg-icons";
+
+import {
   BulmaLogo,
   CRALogo,
   CSS3Logo,
@@ -30,6 +36,37 @@ export const social = [
   { url: "https://github.com/seantolbert", icon: faGithub },
   { url: "https://www.linkedin.com/in/seantolbert/", icon: faLinkedin },
   { url: "https://codepen.io/stolbert", icon: faCodepen },
+];
+
+// utils
+const random = (min, max, precision) => {
+  return (
+    Math.floor(
+      Math.random() * (max * precision - min * precision) + min * precision
+    ) /
+    (1 * precision)
+  );
+};
+
+export const menuItems = [
+  {
+    dest: "#About",
+    title: "About",
+    icon: faPortrait,
+    duration: random(0, 1.3, 100),
+  },
+  {
+    dest: "#Portfolio",
+    title: "Portfolio",
+    icon: faJedi,
+    duration: random(0, 1.3, 100),
+  },
+  {
+    dest: "#Contact",
+    title: "Contact",
+    icon: faContactCard,
+    duration: random(0, 1.3, 100),
+  },
 ];
 
 export const techIKnow = [

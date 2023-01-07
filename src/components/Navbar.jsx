@@ -1,31 +1,11 @@
-import {
-  faContactCard,
-  faJedi,
-  faPortrait,
-} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { menuItems } from "../data/lists";
 import { motion } from "framer-motion";
 import { useState } from "react";
-
 import Logo from "../assets/small_tolbert&co.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const random = (min, max, precision) => {
-    return (
-      Math.floor(
-        Math.random() * (max * precision - min * precision) + min * precision
-      ) /
-      (1 * precision)
-    );
-  };
-
-  const menuItems = [
-    { dest: "#About", icon: faPortrait, duration: random(0, 1.3, 100) },
-    { dest: "#Portfolio", icon: faJedi, duration: random(0, 1.3, 100) },
-    { dest: "#Contact", icon: faContactCard, duration: random(0, 1.3, 100) },
-  ];
 
   return (
     <div className=" fixed bottom-0 right-0 p-5 flex items-center justify-between z-[20]">
@@ -55,14 +35,12 @@ const Navbar = () => {
         </div>
       ) : (
         <>
-        
-          {/* <div className="w-10">
-            <img src={Logo} alt="" />
-          </div> */}
           <div className="flex gap-5 text-white">
-            <a href="#About">About</a>
-            <a href="#Portfolio">Portfolio</a>
-            <a href="#Contact">Contact</a>
+            {menuItems.map((m, i) => (
+              <a key={i} href={m.dest}>
+                {m.title}
+              </a>
+            ))}
           </div>
         </>
       )}
