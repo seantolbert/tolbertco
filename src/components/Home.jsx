@@ -11,7 +11,7 @@ export default function Home() {
         id="home"
         className="h-screen flex justify-evenly items-center flex-col"
       >
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="flex flex-col gap-5 w-4/5">
           <p className="text-primary font-bold text-6xl md:text-8xl">
             Hey, I'm Sean.
